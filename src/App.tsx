@@ -32,7 +32,9 @@ const Wrapper = styled.main`
     // 1200픽셀 이상의 화면 너비에 대한 반응형 디자인
     @media only screen and (min-width: 1200px)
     {
-        width: 1200px; // 컴포넌트의 좌우 너비 1200픽셀 고정
+        & > img {
+            width: 100%;
+        }
     }
 `;
 
