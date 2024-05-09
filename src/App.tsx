@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Route, Routes} from "react-router-dom";
 import {Main} from "./pages/main";
+import {Notfound} from "./pages/notfound";
 
 function App() {
     return (
@@ -10,6 +11,9 @@ function App() {
             <Routes>
                 {/* 최상위 경로에 Main 컴포넌트 라우팅 */}
                 <Route path="/" element={<Main/>}/>
+
+                {/*존재하지 않는 페이지로 접근할 경우 Main 컴포넌트로 리다이렉트*/}
+                <Route path="*" element={<Notfound/>}/>
             </Routes>
 
         </Wrapper>
