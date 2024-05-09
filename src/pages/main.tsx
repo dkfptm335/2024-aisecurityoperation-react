@@ -5,7 +5,7 @@ export const Main = () => {
     return (
         <Wrap>
             <img
-                src='assets/1-main-page.webp'
+                src={'assets/1-main-page.webp'}
                 alt='main page body'
             />
             <GalleryWrap>
