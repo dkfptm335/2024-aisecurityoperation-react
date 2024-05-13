@@ -68,7 +68,6 @@ export const images = [
 export const GridGallery = () => (
     <Gallery
         images={images}
-        maxRows={3}
         margin={2}
         rowHeight={225}
         onClick={(index) => {

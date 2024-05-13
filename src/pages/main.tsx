@@ -13,7 +13,7 @@ export const Main = () => {
                 <Video/>
             </VideoWrap>
             <GalleryWrap>
-                <StyledGridGallery/>
+                <GridGallery/>
             </GalleryWrap>
         </Wrap>
     );
@@ -62,17 +62,5 @@ const VideoWrap = styled(PageTemplate)`
     
     @media screen and (min-width: 1920px){
         top: 35.4%;
-    }
-`;
-
-const StyledGridGallery = styled(GridGallery)`
-    & > img {
-        width: 100%;
-        height: auto;
-    }
-    
-    & > div {
-        width: 100%;
-        height: auto;
     }
 `;
