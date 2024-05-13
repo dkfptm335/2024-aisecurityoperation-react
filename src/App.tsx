@@ -14,6 +14,16 @@ function App() {
             <Routes>
                 {/* 최상위 경로에 Main 컴포넌트 라우팅 */}
                 <Route path="/" element={<Main/>}/>
+                {/*/!*교육소개 페이지*!/*/}
+                {/*<Route path="/introduction" element={<Introduction/>}/>*/}
+                {/*/!*교육과정 페이지*!/*/}
+                {/*<Route path="/curriculum" element={<Curriculum/>}/>*/}
+                {/*/!*교육신청 페이지*!/*/}
+                {/*<Route path="/apply" element={<Apply/>}/>*/}
+                {/*/!*강사진 소개 페이지*!/*/}
+                {/*<Route path="/lecturers" element={<Lecturers/>}/>*/}
+                {/*/!*협약기업 소개 페이지*!/*/}
+                {/*<Route path="/partnership" element={<Partnership/>}/>*/}
 
                 {/*존재하지 않는 페이지로 접근할 경우 Main 컴포넌트로 리다이렉트*/}
                 <Route path="*" element={<Notfound/>}/>

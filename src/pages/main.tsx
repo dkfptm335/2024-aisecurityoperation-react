@@ -47,24 +47,24 @@ const VideoWrap = styled(PageTemplate)`
     transform: translate(-50%, -50%); /* 중앙 정렬을 위해 자신의 크기의 반만큼 이동 */
     width: 80%; /* 필요한 경우 너비 조정 */
     max-width: 1200px; /* 필요한 경우 최대 너비 조정 */
-    
-    @media screen and (min-width: 481px) and (max-width: 768px){
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
         top: 25.5%;
     }
-    
-    @media screen and (min-width: 769px) and (max-width: 1200px){
+
+    @media screen and (min-width: 769px) and (max-width: 1200px) {
         top: 27.5%;
     }
 
-    @media screen and (min-width: 1201px) and (max-width: 1440px){
+    @media screen and (min-width: 1201px) and (max-width: 1440px) {
         top: 29.5%;
     }
 
-    @media screen and (min-width: 1441px) and (max-width: 1919px){
+    @media screen and (min-width: 1441px) and (max-width: 1919px) {
         top: 33.5%;
     }
-    
-    @media screen and (min-width: 1920px){
+
+    @media screen and (min-width: 1920px) {
         top: 35.4%;
     }
 `;
