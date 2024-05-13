@@ -34,6 +34,10 @@ const Wrap = styled(PageTemplate)`
 const GalleryWrap = styled(PageTemplate)`
     max-width: 1600px;
     margin: 0 auto;
+    border: 2px solid transparent; /* 테두리를 파란색으로 설정 */
+    border-radius: 50px; /* 둥근 테두리를 원한다면 추가 */
+    box-sizing: border-box; /* 테두리 및 패딩을 총 크기에 포함 */
+    overflow: hidden; /* 둥근 테두리 밖의 내용 숨기기 */
 `;
 
 const VideoWrap = styled(PageTemplate)`
