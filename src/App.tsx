@@ -1,12 +1,15 @@
 import React from 'react';
 import styled from "styled-components";
 import {Route, Routes} from "react-router-dom";
+import {Header} from "./layouts/header";
+import {Footer} from "./layouts/footer";
 import {Main} from "./pages/main";
 import {Notfound} from "./pages/notfound";
 
 function App() {
     return (
         <Wrapper>
+            <Header/>
 
             <Routes>
                 {/* 최상위 경로에 Main 컴포넌트 라우팅 */}
@@ -16,6 +19,7 @@ function App() {
                 <Route path="*" element={<Notfound/>}/>
             </Routes>
 
+            <Footer/>
         </Wrapper>
     );
 }

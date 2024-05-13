@@ -16,7 +16,7 @@ const images = [
     },
 ];
 
-class Gallery extends React.Component {
+class SlideGallery extends React.Component {
     render() {
         return <ImageGallery
             items={images}
@@ -25,4 +25,4 @@ class Gallery extends React.Component {
     }
 }
 
-export default Gallery;
+export default SlideGallery;

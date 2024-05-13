@@ -2,6 +2,6 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
 const sweetAlert = Swal.mixin({
-    width: "35rem",
+    width: "70rem",
 });
-export const Alert = withReactContent(sweetAlert);
+export const PhotoAlert = withReactContent(sweetAlert);

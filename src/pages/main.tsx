@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import Gallery from "../components/gallery";
+import {Video} from "../components/video";
+import {GridGallery} from "../components/gridGallery";
 
 export const Main = () => {
     return (
@@ -8,17 +9,11 @@ export const Main = () => {
                 src={'assets/1-main-page.webp'}
                 alt='main page body'
             />
-            <Button>
-                <img
-                    src={'assets/1-main-button.webp'}
-                    alt='main page button'
-                    onClick={() => {
-                        window.open('https://www.naver.com', '_blank');
-                    }}
-                />
-            </Button>
+            <VideoWrap>
+                <Video/>
+            </VideoWrap>
             <GalleryWrap>
-                <Gallery/>
+                <StyledGridGallery/>
             </GalleryWrap>
         </Wrap>
     );
@@ -26,47 +21,58 @@ export const Main = () => {
 
 export const PageTemplate = styled.section`
     position: relative;
-    
-    & > img {
-        width: 100%;
-    }
-`;
-
-const Wrap = styled(PageTemplate)``;
-
-const GalleryWrap = styled(PageTemplate)``;
-
-export const ImageButtonBase = styled.button`
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    cursor: pointer;
 
     & > img {
         width: 100%;
     }
 `;
 
-const Button = styled(ImageButtonBase)`
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    
-    // 모바일 세로
-    top: 39.5%;
+const Wrap = styled(PageTemplate)`
+    position: relative; /* Wrap 컴포넌트를 상대 위치로 설정 */
+`;
 
-    // 모바일 가로, 태블릿 세로
-    @media only screen and (min-width: 481px) and (max-width: 768px){
-        top: 41%;
+const GalleryWrap = styled(PageTemplate)`
+    max-width: 1600px;
+    margin: 0 auto;
+`;
+
+const VideoWrap = styled(PageTemplate)`
+    position: absolute; /* VideoWrap을 절대 위치로 설정 */
+    top: 18.5%; /* 상단에서부터 50% 위치 */
+    left: 50%; /* 왼쪽에서부터 50% 위치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬을 위해 자신의 크기의 반만큼 이동 */
+    width: 80%; /* 필요한 경우 너비 조정 */
+    max-width: 1200px; /* 필요한 경우 최대 너비 조정 */
+    
+    @media screen and (min-width: 481px) and (max-width: 768px){
+        top: 25.5%;
     }
     
-    // 태블릿 가로 ~ 1200픽셀
-    @media only screen and (min-width: 769px) and (max-width: 1199px){
-        top: 41.5%;
+    @media screen and (min-width: 769px) and (max-width: 1200px){
+        top: 27.5%;
+    }
+
+    @media screen and (min-width: 1201px) and (max-width: 1440px){
+        top: 29.5%;
+    }
+
+    @media screen and (min-width: 1441px) and (max-width: 1919px){
+        top: 33.5%;
     }
     
-    // 1200픽셀 이상의 화면 너비에 대한 반응형 디자인
-    @media only screen and (min-width: 1200px) {
-        top: 41.5%;
+    @media screen and (min-width: 1920px){
+        top: 35.4%;
+    }
+`;
+
+const StyledGridGallery = styled(GridGallery)`
+    & > img {
+        width: 100%;
+        height: auto;
+    }
+    
+    & > div {
+        width: 100%;
+        height: auto;
     }
 `;
