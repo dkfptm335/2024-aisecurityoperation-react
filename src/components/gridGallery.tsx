@@ -1,5 +1,4 @@
 import {Gallery} from "react-grid-gallery";
-import styled from "styled-components";
 import {PhotoAlert} from "../layouts/photoAlert";
 
 export const images = [

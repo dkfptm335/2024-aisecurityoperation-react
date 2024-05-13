@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Footer = () => {
     return (
         <Wrap>
-            <img src='/assets/footer.webp' alt='footer ' />
+            <img src='assets/footer.webp' alt='footer ' />
         </Wrap>
     );
 }

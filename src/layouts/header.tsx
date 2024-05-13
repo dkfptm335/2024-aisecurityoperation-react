@@ -9,13 +9,13 @@ export const Header = () => {
             <Container>
                 <Link to='/'>
                     <Button>
-                        <img src="/assets/0-home-button.webp"
+                        <img src="assets/0-home-button.webp"
                              alt="go home page button"/>
                     </Button>
                 </Link>
                 <Link to='/detail'>
                     <Button>
-                        <img src={`/assets/1-detail-button${
+                        <img src={`assets/1-detail-button${
                             pathname === '/detail' ? '-hover' : ''
                         }.webp`}
                              alt="go detail page button"/>
@@ -23,7 +23,7 @@ export const Header = () => {
                 </Link>
                 <Link to='/schedule'>
                     <Button>
-                        <img src={`/assets/2-schedule-button${
+                        <img src={`assets/2-schedule-button${
                             pathname === '/schedule' ? '-hover' : ''
                         }.webp`}
                              alt="go schedule page button"/>
@@ -31,7 +31,7 @@ export const Header = () => {
                 </Link>
                 <Link to='/apply'>
                     <Button>
-                        <img src={`/assets/3-apply-button${
+                        <img src={`assets/3-apply-button${
                             pathname === '/apply' ? '-hover' : ''
                         }.webp`}
                              alt="go apply page button"/>
@@ -39,7 +39,7 @@ export const Header = () => {
                 </Link>
                 <Link to='/award'>
                     <Button>
-                        <img src={`/assets/4-award-button${
+                        <img src={`assets/4-award-button${
                             pathname === '/award' ? '-hover' : ''
                         }.webp`}
                              alt="go award page button"/>
@@ -50,7 +50,7 @@ export const Header = () => {
                     target="_blank"
                     rel="noreferrer">
                     <Button>
-                        <img src="/assets/redirect-czon-button.webp"
+                        <img src="assets/redirect-czon-button.webp"
                              alt="go czon page button"/>
                     </Button>
                 </a>
