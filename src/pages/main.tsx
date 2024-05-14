@@ -38,7 +38,7 @@ export const Main = () => {
             <img src={'assets/1-main-page.webp'} alt='main page body'/>
             {showScrollButton && (
                 <ScrollButton onClick={scrollToVideo}>
-                    <img src={'assets/화살표.png'}/>
+                    <img src={'assets/direction-sign.png'}/>
                 </ScrollButton>
             )}
             <VideoWrap ref={videoRef}>

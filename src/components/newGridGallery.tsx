@@ -1,6 +1,5 @@
 import React from 'react';
 import './style.css';
-import styled from "styled-components";
 
 import LightGallery from 'lightgallery/react';
 import lgZoom from 'lightgallery/plugins/zoom';
