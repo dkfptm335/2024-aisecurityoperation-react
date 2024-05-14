@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styled from "styled-components";
 import {Video} from "../components/video";
-import {GridGallery} from "../components/gridGallery";
+import {CarouselGallery, GridGallery} from "../components/gridGallery";
 import {NewGridGallery} from "../components/newGridGallery";
 
 export const Main = () => {
@@ -46,7 +46,8 @@ export const Main = () => {
             </VideoWrap>
             <GalleryWrap>
                 {/*<NewGridGallery/>*/}
-                <GridGallery/>
+                {/*<GridGallery/>*/}
+                <CarouselGallery/>
             </GalleryWrap>
         </Wrap>
     );
@@ -77,7 +78,6 @@ const GalleryWrap = styled(PageTemplate)`
     border: 2px solid transparent;
     //border-radius: 50px; /* 둥근 테두리를 원한다면 추가 */
     box-sizing: border-box; /* 테두리 및 패딩을 총 크기에 포함 */
-    overflow: hid; /* 둥근 테두리 밖의 내용 숨기기 */
 `;
 
 const VideoWrap = styled(PageTemplate)`

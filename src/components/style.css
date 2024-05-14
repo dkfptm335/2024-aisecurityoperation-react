@@ -14,3 +14,14 @@ body {
     margin: 2px;
     cursor: pointer;
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+}
