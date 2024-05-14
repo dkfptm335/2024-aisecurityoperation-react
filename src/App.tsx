@@ -8,7 +8,6 @@ import {Introduction} from "./pages/introduction";
 import {Curriculum} from "./pages/curriculum";
 import {Apply} from "./pages/apply";
 import {Lecturers} from "./pages/lecturers";
-import {Partnership} from "./pages/partnership";
 import {Notfound} from "./pages/notfound";
 
 function App() {
@@ -27,9 +26,6 @@ function App() {
                 <Route path="/apply" element={<Apply/>}/>
                 {/*강사진 소개 페이지*/}
                 <Route path="/lecturers" element={<Lecturers/>}/>
-                {/*협약기업 소개 페이지*/}
-                <Route path="/partnership" element={<Partnership/>}/>
-
                 {/*존재하지 않는 페이지로 접근할 경우 Main 컴포넌트로 리다이렉트*/}
                 <Route path="*" element={<Notfound/>}/>
             </Routes>
