@@ -45,8 +45,8 @@ export const Main = () => {
                 <Video/>
             </VideoWrap>
             <GalleryWrap>
-                {/*<NewGridGallery/>*/}
-                <GridGallery/>
+                <NewGridGallery/>
+                {/*<GridGallery/>*/}
             </GalleryWrap>
         </Wrap>
     );
