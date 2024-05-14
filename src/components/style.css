@@ -1,0 +1,16 @@
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-video.css');
+
+h1, p {
+    font-family: "Noto Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.gallery-item {
+    margin: 2px;
+    cursor: pointer;
+}
