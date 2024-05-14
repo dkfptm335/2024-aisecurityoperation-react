@@ -45,14 +45,6 @@ export const Header = () => {
                              alt="go award page button"/>
                     </Button>
                 </Link>
-                <Link to='/partnership'>
-                    <Button>
-                        <img src={`assets/4-award-button${
-                            pathname === '/partnership' ? '-hover' : ''
-                        }.webp`}
-                             alt="go award page button"/>
-                    </Button>
-                </Link>
             </Container>
         </Wrap>
     );
@@ -60,7 +52,10 @@ export const Header = () => {
 
 const Wrap = styled.header`
     display: flex;
+    justify-content: center;
+    align-items: center;
 `;
+
 
 const Container = styled.nav`
     display: flex;
