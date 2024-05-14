@@ -2,24 +2,25 @@ import React, {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
 import {Video} from "../components/video";
 import {CarouselGallery} from "../components/gridGallery";
+import {Gallery} from "react-grid-gallery";
 
 export const Main = () => {
-    const videoRef = useRef<HTMLElement>(null);
+    const GalleryRef = useRef<HTMLElement>(null);
     // 화살표 보이기/숨기기를 위한 상태
     const [showScrollButton, setShowScrollButton] = useState(true);
 
-    const scrollToVideo = () => {
-        if (videoRef.current) {
-            videoRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
+    const scrollToGallery = () => {
+        if (GalleryRef.current) {
+            GalleryRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
         }
     };
 
     // 스크롤 위치에 따라 화살표 상태 업데이트
     useEffect(() => {
         const onScroll = () => {
-            if (videoRef.current) {
-                const videoPosition = videoRef.current.getBoundingClientRect().top;
-                const isVisible = videoPosition > window.innerHeight;
+            if (GalleryRef.current) {
+                const GalleryPosition = GalleryRef.current.getBoundingClientRect().top;
+                const isVisible = GalleryPosition > window.innerHeight;
 
                 setShowScrollButton(isVisible);
             }
@@ -36,14 +37,14 @@ export const Main = () => {
         <Wrap>
             <img src={'assets/1-main-page.webp'} alt='main page body'/>
             {showScrollButton && (
-                <ScrollButton onClick={scrollToVideo}>
+                <ScrollButton onClick={scrollToGallery}>
                     <img src={'assets/direction-sign.png'}/>
                 </ScrollButton>
             )}
-            <VideoWrap ref={videoRef}>
-                <Video/>
-            </VideoWrap>
-            <GalleryWrap>
+            {/*<VideoWrap ref={videoRef}>*/}
+            {/*    <Video/>*/}
+            {/*</VideoWrap>*/}
+            <GalleryWrap ref={GalleryRef}>
                 <StyledCarouselGallery/>
                 {/*<NewGridGallery/>*/}
                 {/*<GridGallery/>*/}
