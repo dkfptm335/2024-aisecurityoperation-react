@@ -25,3 +25,13 @@ body {
     width: 100%;
     height: auto;
 }
+
+.slick-dots li button:before {
+    opacity: 1;
+    color: gray !important;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: white !important;
+}

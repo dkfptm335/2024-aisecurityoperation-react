@@ -1,8 +1,7 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
 import {Video} from "../components/video";
-import {CarouselGallery, GridGallery} from "../components/gridGallery";
-import {NewGridGallery} from "../components/newGridGallery";
+import {CarouselGallery} from "../components/gridGallery";
 
 export const Main = () => {
     const videoRef = useRef<HTMLElement>(null);
@@ -11,7 +10,7 @@ export const Main = () => {
 
     const scrollToVideo = () => {
         if (videoRef.current) {
-            videoRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            videoRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
         }
     };
 
@@ -45,7 +44,7 @@ export const Main = () => {
                 <Video/>
             </VideoWrap>
             <GalleryWrap>
-                <CarouselGallery/>
+                <StyledCarouselGallery/>
                 {/*<NewGridGallery/>*/}
                 {/*<GridGallery/>*/}
             </GalleryWrap>
@@ -78,6 +77,16 @@ const GalleryWrap = styled(PageTemplate)`
     border: 2px solid transparent;
     //border-radius: 50px; /* 둥근 테두리를 원한다면 추가 */
     box-sizing: border-box; /* 테두리 및 패딩을 총 크기에 포함 */
+    padding-bottom: 30px;
+    padding-top: 30px;
+`;
+
+const StyledCarouselGallery = styled(CarouselGallery)`
+    max-width: 1600px;
+
+    @media screen and (max-width: 1599px) {
+        width: 100%;
+    }
 `;
 
 const VideoWrap = styled(PageTemplate)`
