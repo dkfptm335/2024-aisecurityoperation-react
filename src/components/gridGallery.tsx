@@ -132,7 +132,7 @@ export const CarouselGallery = () => {
                         imageHeight: 'auto',
                         confirmButtonText: '닫기',
                     });
-                }}>
+                }} className="gallery-carousel-item">
                     <img src={image.src} alt={`gallery-${index}`} width={image.width} height={image.height}/>
                 </div>
             ))}

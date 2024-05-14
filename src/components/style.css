@@ -35,3 +35,11 @@ body {
     opacity: 1;
     color: white !important;
 }
+
+.gallery-carousel-item {
+    
+    cursor: pointer; /* 커서를 포인터로 변경 */
+    display: flex; /* 이미지를 중앙에 정렬 */
+    justify-content: center; /* 가로 방향으로 중앙 정렬 */
+    align-items: center; /* 세로 방향으로 중앙 정렬 */
+}
