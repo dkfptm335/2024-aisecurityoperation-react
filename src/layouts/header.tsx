@@ -13,18 +13,18 @@ export const Header = () => {
                              alt="go home page button"/>
                     </Button>
                 </Link>
-                <Link to='/detail'>
+                <Link to='/introduction'>
                     <Button>
                         <img src={`assets/1-detail-button${
-                            pathname === '/detail' ? '-hover' : ''
+                            pathname === '/introduction' ? '-hover' : ''
                         }.webp`}
                              alt="go detail page button"/>
                     </Button>
                 </Link>
-                <Link to='/schedule'>
+                <Link to='/curriculum'>
                     <Button>
                         <img src={`assets/2-schedule-button${
-                            pathname === '/schedule' ? '-hover' : ''
+                            pathname === '/curriculum' ? '-hover' : ''
                         }.webp`}
                              alt="go schedule page button"/>
                     </Button>
@@ -37,23 +37,22 @@ export const Header = () => {
                              alt="go apply page button"/>
                     </Button>
                 </Link>
-                <Link to='/award'>
+                <Link to='/lecturers'>
                     <Button>
                         <img src={`assets/4-award-button${
-                            pathname === '/award' ? '-hover' : ''
+                            pathname === '/lecturers' ? '-hover' : ''
                         }.webp`}
                              alt="go award page button"/>
                     </Button>
                 </Link>
-                <a
-                    href="https://www.czon.io/challenge"
-                    target="_blank"
-                    rel="noreferrer">
+                <Link to='/partnership'>
                     <Button>
-                        <img src="assets/redirect-czon-button.webp"
-                             alt="go czon page button"/>
+                        <img src={`assets/4-award-button${
+                            pathname === '/partnership' ? '-hover' : ''
+                        }.webp`}
+                             alt="go award page button"/>
                     </Button>
-                </a>
+                </Link>
             </Container>
         </Wrap>
     );

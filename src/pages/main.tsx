@@ -42,29 +42,29 @@ const GalleryWrap = styled(PageTemplate)`
 
 const VideoWrap = styled(PageTemplate)`
     position: absolute; /* VideoWrap을 절대 위치로 설정 */
-    top: 18.5%; /* 상단에서부터 50% 위치 */
+    top: 225px;
     left: 50%; /* 왼쪽에서부터 50% 위치 */
     transform: translate(-50%, -50%); /* 중앙 정렬을 위해 자신의 크기의 반만큼 이동 */
     width: 80%; /* 필요한 경우 너비 조정 */
     max-width: 1200px; /* 필요한 경우 최대 너비 조정 */
 
     @media screen and (min-width: 481px) and (max-width: 768px) {
-        top: 25.5%;
+        top: 440px;
     }
 
     @media screen and (min-width: 769px) and (max-width: 1200px) {
-        top: 27.5%;
+        top: 570px;
     }
 
     @media screen and (min-width: 1201px) and (max-width: 1440px) {
-        top: 29.5%;
+        top: 770px;
     }
 
     @media screen and (min-width: 1441px) and (max-width: 1919px) {
-        top: 33.5%;
+        top: 990px;
     }
 
     @media screen and (min-width: 1920px) {
-        top: 35.4%;
+        top: 1186px;
     }
 `;
