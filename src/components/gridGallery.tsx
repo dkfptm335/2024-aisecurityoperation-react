@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Slider from "react-slick";
-import {Gallery} from "react-grid-gallery";
 import {PhotoAlert} from "../layouts/photoAlert";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -71,7 +70,7 @@ export const images = [
         src: 'assets/gallery/1.jpg',
         width: 400,
         height: 225,
-    },    {
+    }, {
         src: 'assets/gallery/3.jpg',
         width: 400,
         height: 225,
@@ -83,7 +82,7 @@ export const GridGallery = () => {
         <div className="gallery">
             {images.slice(0, 12).map((img, index) => ( // 첫 12개 이미지만 표시합니다.
                 <div className="gallery-item" key={index}>
-                    <img src={img.src} alt={`gallery-${index}`} />
+                    <img src={img.src} alt={`gallery-${index}`}/>
                 </div>
             ))}
         </div>
@@ -97,7 +96,7 @@ export const CarouselGallery = () => {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
-        rows:3,
+        rows: 3,
         responsive: [
             {
                 breakpoint: 1024,
@@ -134,7 +133,7 @@ export const CarouselGallery = () => {
                         confirmButtonText: '닫기',
                     });
                 }}>
-                    <img src={image.src} alt={`gallery-${index}`} width={image.width} height={image.height} />
+                    <img src={image.src} alt={`gallery-${index}`} width={image.width} height={image.height}/>
                 </div>
             ))}
         </Slider>

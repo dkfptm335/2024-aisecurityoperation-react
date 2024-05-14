@@ -78,7 +78,6 @@ const GalleryWrap = styled(PageTemplate)`
     border: 2px solid transparent;
     //border-radius: 50px; /* 둥근 테두리를 원한다면 추가 */
     box-sizing: border-box; /* 테두리 및 패딩을 총 크기에 포함 */
-    overflow: hidden; /* 둥근 테두리 밖의 내용 숨기기 */
 `;
 
 const VideoWrap = styled(PageTemplate)`
