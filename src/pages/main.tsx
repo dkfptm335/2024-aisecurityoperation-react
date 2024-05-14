@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styled from "styled-components";
 import {Video} from "../components/video";
-import {GridGallery} from "../components/gridGallery";
+import {CarouselGallery, GridGallery} from "../components/gridGallery";
 import {NewGridGallery} from "../components/newGridGallery";
 
 export const Main = () => {
@@ -45,7 +45,8 @@ export const Main = () => {
                 <Video/>
             </VideoWrap>
             <GalleryWrap>
-                <NewGridGallery/>
+                <CarouselGallery/>
+                {/*<NewGridGallery/>*/}
                 {/*<GridGallery/>*/}
             </GalleryWrap>
         </Wrap>
