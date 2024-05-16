@@ -37,15 +37,21 @@ export const Main = () => {
                 <MainImage src={'assets/1-main-page.webp'} alt='main page body'/>
                 {showScrollButton && (
                     <ScrollButton onClick={scrollToGallery}>
-                        <img src={'assets/direction-sign.png'} alt={'ScrollButton'}/>
+                        <img
+                            src={'assets/scroll-button.png'}
+                            alt={'ScrollButton'}
+                        />
                     </ScrollButton>
                 )}
                 <ButtonWrap>
                     <img
-                        src={'assets/pngs/1-main-button.png'} alt='main page button'
+                        src={'assets/1-main-page-button.png'} alt='go explain video button'
                         onClick={() => (
                             window.open('https://www.naver.com/', '_blank')
                         )}
+                        style={{
+                            zIndex: 1,
+                        }}
                     />
                 </ButtonWrap>
             </MainImageWrap>
@@ -75,6 +81,10 @@ const MainImageWrap = styled(PageTemplate)`
     justify-content: center;
 `;
 
+const MainImage = styled.img`
+    max-width: 1600px;
+`;
+
 const GalleryWrap = styled(PageTemplate)`
     max-width: 1600px;
     margin: 0 auto;
@@ -93,6 +103,7 @@ const ScrollButton = styled.button`
     background-color: transparent;
     border: none;
     cursor: pointer;
+    z-index: 2;
 
     /* 모바일 화면에서 버튼 숨기기 */
     @media (max-width: 768px) {
@@ -103,21 +114,25 @@ const ScrollButton = styled.button`
 const StyledCarouselGallery = styled(CarouselGallery)`
     max-width: 1600px;
 
-    @media screen and (max-width: 1599px) {
+    @media screen and (max-width: 1199px) {
         width: 100%;
     }
 `;
 
 const ButtonWrap = styled(PageTemplate)`
     position: absolute;
-    top: 60.5%; /* 상단에서부터 50% 위치 */
-    left: 50%; /* 왼쪽에서부터 50% 위치 */
-    transform: translate(-50%, -50%); /* 중앙 정렬을 위해 가로와 세로 모두 자신의 크기의 반만큼 이동 */
-    width: 80%; /* 필요한 경우 너비 조정 */
-    max-width: 1200px; /* 필요한 경우 최대 너비 조정 */
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 569px;
     cursor: pointer;
-`;
+    display: flex;
+    justify-content: center;
 
-const MainImage = styled.img`
-    max-width: 1600px;
+    & > img {
+        width: 30vw; /* 뷰포트 너비의 10%로 너비 설정 */
+        height: auto; /* 높이를 자동으로 조절하여 비율 유지 */
+        max-width: 100%; /* 이미지가 부모 요소보다 커지지 않도록 제한 */
+    }
 `;

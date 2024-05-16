@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Footer = () => {
     return (
         <Wrap>
-            <FooterImage src='assets/footer.webp' alt='footer ' />
+            <FooterImage src='assets/footer.png' alt='footer ' />
         </Wrap>
     );
 }
@@ -18,5 +18,5 @@ const Wrap = styled.footer`
 `;
 
 const FooterImage = styled.img`
-    max-width: 1600px;
+    max-width: 1920px;
 `;

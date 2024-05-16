@@ -1,51 +1,89 @@
 import styled from "styled-components";
-import {PageTemplate} from "./main";
-import {useState} from "react";
+import { PageTemplate } from "./main";
+import { useState } from "react";
 
-export const Curriculum = () => {
-    const [curriName, setCurriName] = useState(1);
+export const Curriculum: React.FC = () => {
+    const [curriName, setCurriName] = useState<"normal" | "practical" | "special">("normal");
 
     return (
         <Wrap>
-            <ClassWrap>
-                <button
-                    onClick={() => setCurriName(1)}
-                    style={{backgroundColor: curriName === 1 ? 'black' : 'white', color: curriName === 1 ? 'white' : 'black'}}
-                >1학년
-                </button>
-                <button
-                    onClick={() => setCurriName(2)}
-                    style={{backgroundColor: curriName === 2 ? 'black' : 'white', color: curriName === 2 ? 'white' : 'black'}}
-                >2학년</button>
-                <button
-                    onClick={() => setCurriName(3)}
-                    style={{backgroundColor: curriName === 3 ? 'black' : 'white', color: curriName === 3 ? 'white' : 'black'}}
-                >3학년</button>
+            <MainImageWrap>
+                <MainImage
+                    src={`assets/3-curriculum-${curriName}.webp`}
+                    alt='curriculum page body'
+                />
+            </MainImageWrap>
+            <ClassWrap curriName={curriName}>
+                <img
+                    src={`assets/3-common-button${curriName === "normal" ? '-hover' : ''}.png`}
+                    alt="common button"
+                    onClick={() => setCurriName("normal")}
+                />
+                <img
+                    src={`assets/3-practical-button${curriName === "practical" ? '-hover' : ''}.png`}
+                    alt="practical button"
+                    onClick={() => setCurriName("practical")}
+                />
+                <img
+                    src={`assets/3-special-button${curriName === "special" ? '-hover' : ''}.png`}
+                    alt="special button"
+                    onClick={() => setCurriName("special")}
+                />
             </ClassWrap>
-            <ContentWrap>
-                { curriName === 1 ? <img src="assets/gallery/0.jpeg" alt="0"/> : null }
-                { curriName === 2 ? <img src="assets/gallery/1.jpg" alt="1"/> : null }
-                { curriName === 3 ? <img src="assets/gallery/2.jpeg" alt="2"/> : null }
-            </ContentWrap>
         </Wrap>
-    )
+    );
 };
 
+interface ClassWrapProps {
+    curriName: "normal" | "practical" | "special";
+}
+
 const Wrap = styled(PageTemplate)`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
 `;
 
-const ClassWrap = styled.div`
+const ClassWrap = styled.nav<ClassWrapProps>`
     display: flex;
     justify-content: center;
-    gap: 20px;
-`;
+    width: 100%;
+    max-width: 1600px;
+    position: absolute;
+    top: ${({ curriName }) => {
+        switch (curriName) {
+            case 'practical':
+                return '36%';
+            case 'special':
+                return '63%';
+            case 'normal':
+            default:
+                return '46.5%';
+        }
+    }};
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
 
-const ContentWrap = styled.div`
-    display: flex;
-    justify-content: center;
-    
     & > img {
-        width: 100%;
-        max-width: 1600px;
+        cursor: pointer;
+        width: 27%;
     }
+
+    @media screen and (max-width: 768px) {
+        /* 작은 화면에서 스타일링 추가 */
+    }
+`;
+
+const MainImageWrap = styled(PageTemplate)`
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+`;
+
+const MainImage = styled.img`
+    max-width: 1600px;
 `;
