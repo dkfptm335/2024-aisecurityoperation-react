@@ -7,7 +7,7 @@ export const Curriculum = () => {
 
     return (
         <Wrap>
-            <ButtonWrap>
+            <ClassWrap>
                 <button
                     onClick={() => setClassName(1)}
                     style={{backgroundColor: className === 1 ? 'black' : 'white', color: className === 1 ? 'white' : 'black'}}
@@ -21,7 +21,7 @@ export const Curriculum = () => {
                     onClick={() => setClassName(3)}
                     style={{backgroundColor: className === 3 ? 'black' : 'white', color: className === 3 ? 'white' : 'black'}}
                 >3학년</button>
-            </ButtonWrap>
+            </ClassWrap>
             <ContentWrap>
                 { className === 1 ? <img src="assets/gallery/0.jpeg" alt="0"/> : null }
                 { className === 2 ? <img src="assets/gallery/1.jpg" alt="1"/> : null }
@@ -34,7 +34,7 @@ export const Curriculum = () => {
 const Wrap = styled(PageTemplate)`
 `;
 
-const ButtonWrap = styled.div`
+const ClassWrap = styled.div`
     display: flex;
     justify-content: center;
     gap: 20px;
