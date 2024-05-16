@@ -108,5 +108,4 @@ const ButtonWrap = styled(PageTemplate)`
     width: 80%; /* 필요한 경우 너비 조정 */
     max-width: 1200px; /* 필요한 경우 최대 너비 조정 */
     cursor: pointer;
-    /* 미디어 쿼리를 통해 반응형 디자인을 구현할 수 있으나, 중앙 정렬에는 영향을 주지 않습니다 */
 `;
