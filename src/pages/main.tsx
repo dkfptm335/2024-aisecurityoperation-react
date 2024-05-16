@@ -1,8 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
-import {Video} from "../components/video";
 import {CarouselGallery} from "../components/gridGallery";
-import {Gallery} from "react-grid-gallery";
 
 export const Main = () => {
     const GalleryRef = useRef<HTMLElement>(null);
@@ -35,15 +33,22 @@ export const Main = () => {
 
     return (
         <Wrap>
-            <img src={'assets/1-main-page.webp'} alt='main page body'/>
-            {showScrollButton && (
-                <ScrollButton onClick={scrollToGallery}>
-                    <img src={'assets/direction-sign.png'}/>
-                </ScrollButton>
-            )}
-            {/*<VideoWrap ref={videoRef}>*/}
-            {/*    <Video/>*/}
-            {/*</VideoWrap>*/}
+            <MainImageWrap>
+                <img src={'assets/1-main-page.webp'} alt='main page body'/>
+                {showScrollButton && (
+                    <ScrollButton onClick={scrollToGallery}>
+                        <img src={'assets/direction-sign.png'}/>
+                    </ScrollButton>
+                )}
+                <ButtonWrap>
+                    <img
+                        src={'assets/pngs/1-main-button.png'} alt='main page button'
+                        onClick={() => (
+                            window.open('https://www.naver.com/', '_blank')
+                        )}
+                    />
+                </ButtonWrap>
+            </MainImageWrap>
             <GalleryWrap ref={GalleryRef}>
                 <StyledCarouselGallery/>
                 {/*<NewGridGallery/>*/}
@@ -60,16 +65,12 @@ export const PageTemplate = styled.section`
         width: 100%;
     }
 `;
-const ScrollButton = styled.button`
-    position: fixed; // 화면에 고정
-    left: 50%; // 좌우 중앙에 위치
-    bottom: 20px; // 하단에서 20px 위에 위치
-    transform: translateX(-50%); // 정확한 중앙 정렬을 위해
-    background-color: transparent; // 배경색을 투명하게 설정
-    border: none; // 테두리 제거
-`;
+
 const Wrap = styled(PageTemplate)`
     position: relative; /* Wrap 컴포넌트를 상대 위치로 설정 */
+`;
+
+const MainImageWrap = styled(PageTemplate)`
 `;
 
 const GalleryWrap = styled(PageTemplate)`
@@ -82,6 +83,15 @@ const GalleryWrap = styled(PageTemplate)`
     padding-top: 30px;
 `;
 
+const ScrollButton = styled.button`
+    position: fixed; // 화면에 고정
+    left: 50%; // 좌우 중앙에 위치
+    bottom: 20px; // 하단에서 20px 위에 위치
+    transform: translateX(-50%); // 정확한 중앙 정렬을 위해
+    background-color: transparent; // 배경색을 투명하게 설정
+    border: none; // 테두리 제거
+`;
+
 const StyledCarouselGallery = styled(CarouselGallery)`
     max-width: 1600px;
 
@@ -90,31 +100,13 @@ const StyledCarouselGallery = styled(CarouselGallery)`
     }
 `;
 
-const VideoWrap = styled(PageTemplate)`
+const ButtonWrap = styled(PageTemplate)`
     position: absolute; /* VideoWrap을 절대 위치로 설정 */
-    top: 225px;
+    top: 60.5%; /* 상단에서부터 50% 위치 */
     left: 50%; /* 왼쪽에서부터 50% 위치 */
-    transform: translate(-50%, -50%); /* 중앙 정렬을 위해 자신의 크기의 반만큼 이동 */
+    transform: translate(-50%, -50%); /* 중앙 정렬을 위해 가로와 세로 모두 자신의 크기의 반만큼 이동 */
     width: 80%; /* 필요한 경우 너비 조정 */
     max-width: 1200px; /* 필요한 경우 최대 너비 조정 */
-
-    @media screen and (min-width: 481px) and (max-width: 768px) {
-        top: 440px;
-    }
-
-    @media screen and (min-width: 769px) and (max-width: 1200px) {
-        top: 570px;
-    }
-
-    @media screen and (min-width: 1201px) and (max-width: 1440px) {
-        top: 770px;
-    }
-
-    @media screen and (min-width: 1441px) and (max-width: 1919px) {
-        top: 990px;
-    }
-
-    @media screen and (min-width: 1920px) {
-        top: 1186px;
-    }
+    cursor: pointer;
+    /* 미디어 쿼리를 통해 반응형 디자인을 구현할 수 있으나, 중앙 정렬에는 영향을 주지 않습니다 */
 `;
