@@ -58,7 +58,7 @@ const ClassWrap = styled.nav<ClassWrapProps>`
             case 'practical':
                 return '36%';
             case 'special':
-                return '63%';
+                return '62.8%';
             case 'normal':
             default:
                 return '46.5%';
