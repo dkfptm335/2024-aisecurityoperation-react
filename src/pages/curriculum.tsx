@@ -61,7 +61,7 @@ const ClassWrap = styled.nav<ClassWrapProps>`
                 return '62.8%';
             case 'normal':
             default:
-                return '46.5%';
+                return '46.45%';
         }
     }};
     left: 50%;
