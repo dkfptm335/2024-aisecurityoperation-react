@@ -79,8 +79,8 @@ const GalleryWrap = styled(PageTemplate)`
     border: 2px solid transparent;
     //border-radius: 50px; /* 둥근 테두리를 원한다면 추가 */
     box-sizing: border-box; /* 테두리 및 패딩을 총 크기에 포함 */
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 34px;
+    padding-top: 34px;
 `;
 
 const ScrollButton = styled.button`
