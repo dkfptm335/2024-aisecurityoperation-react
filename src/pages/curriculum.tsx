@@ -46,5 +46,6 @@ const ContentWrap = styled.div`
     
     & > img {
         width: 100%;
+        max-width: 1600px;
     }
 `;

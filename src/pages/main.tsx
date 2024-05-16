@@ -34,10 +34,10 @@ export const Main = () => {
     return (
         <Wrap>
             <MainImageWrap>
-                <img src={'assets/1-main-page.webp'} alt='main page body'/>
+                <MainImage src={'assets/1-main-page.webp'} alt='main page body'/>
                 {showScrollButton && (
                     <ScrollButton onClick={scrollToGallery}>
-                        <img src={'assets/direction-sign.png'}/>
+                        <img src={'assets/direction-sign.png'} alt={'ScrollButton'}/>
                     </ScrollButton>
                 )}
                 <ButtonWrap>
@@ -71,6 +71,8 @@ const Wrap = styled(PageTemplate)`
 `;
 
 const MainImageWrap = styled(PageTemplate)`
+    display: flex;
+    justify-content: center;
 `;
 
 const GalleryWrap = styled(PageTemplate)`
@@ -79,8 +81,8 @@ const GalleryWrap = styled(PageTemplate)`
     border: 2px solid transparent;
     //border-radius: 50px; /* 둥근 테두리를 원한다면 추가 */
     box-sizing: border-box; /* 테두리 및 패딩을 총 크기에 포함 */
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 34px;
+    padding-top: 34px;
 `;
 
 const ScrollButton = styled.button`
@@ -107,11 +109,15 @@ const StyledCarouselGallery = styled(CarouselGallery)`
 `;
 
 const ButtonWrap = styled(PageTemplate)`
-    position: absolute; /* VideoWrap을 절대 위치로 설정 */
+    position: absolute;
     top: 60.5%; /* 상단에서부터 50% 위치 */
     left: 50%; /* 왼쪽에서부터 50% 위치 */
     transform: translate(-50%, -50%); /* 중앙 정렬을 위해 가로와 세로 모두 자신의 크기의 반만큼 이동 */
     width: 80%; /* 필요한 경우 너비 조정 */
     max-width: 1200px; /* 필요한 경우 최대 너비 조정 */
     cursor: pointer;
+`;
+
+const MainImage = styled.img`
+    max-width: 1600px;
 `;

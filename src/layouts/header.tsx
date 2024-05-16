@@ -60,6 +60,7 @@ const Wrap = styled.header`
 const Container = styled.nav`
     display: flex;
     align-items: center;
+    max-width: 1600px;
 
     img {
         width: 100%;
