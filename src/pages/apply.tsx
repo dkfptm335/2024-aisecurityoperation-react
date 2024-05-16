@@ -53,12 +53,16 @@ const ContentWrap = styled.div`
     }
 `;
 
-const ButtonWrap = styled(PageTemplate)`
+const ButtonWrap = styled.div`
+    display: flex;
+    justify-content: center;
     position: relative;
-    top: 87px;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 중앙 정렬을 위해 가로와 세로 모두 자신의 크기의 반만큼 이동 */
-    width: 80%; /* 필요한 경우 너비 조정 */
-    max-width: 1200px; /* 필요한 경우 최대 너비 조정 */
-    cursor: pointer;
+    
+    & > img {
+        width: 80%;
+        cursor: pointer;
+        left: 50%;
+        max-width: 1200px; /* 필요한 경우 최대 너비 조정 */
+        background-color: transparent;
+    }
 `;
