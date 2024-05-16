@@ -84,12 +84,18 @@ const GalleryWrap = styled(PageTemplate)`
 `;
 
 const ScrollButton = styled.button`
-    position: fixed; // 화면에 고정
-    left: 50%; // 좌우 중앙에 위치
-    bottom: 20px; // 하단에서 20px 위에 위치
-    transform: translateX(-50%); // 정확한 중앙 정렬을 위해
-    background-color: transparent; // 배경색을 투명하게 설정
-    border: none; // 테두리 제거
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    /* 모바일 화면에서 버튼 숨기기 */
+    @media (max-width: 768px) {
+        display: none;
+    }
 `;
 
 const StyledCarouselGallery = styled(CarouselGallery)`
