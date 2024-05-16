@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './style.css';
 import {sliderGalleryImages} from "./images";
+import {PrevArrow, NextArrow} from "./customArrows";
 
 export const GridGallery = () => {
     return (
@@ -26,6 +27,8 @@ export const CarouselGallery = () => {
         slidesToShow: 4,
         slidesToScroll: 4,
         rows: 3,
+        prevArrow: <PrevArrow/>,
+        nextArrow: <NextArrow/>,
         responsive: [
             {
                 breakpoint: 1024,
