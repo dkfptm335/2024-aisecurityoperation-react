@@ -10,7 +10,7 @@ const NextArrow: React.FC<CustomArrowProps> = (props) => {
             onClick={onClick}
         >
             <img
-                src="assets/pngs/nextArrow.png"
+                src={"assets/nextArrow.png"}
                 alt="next"
                 width="50"
             />
@@ -27,7 +27,7 @@ const PrevArrow: React.FC<CustomArrowProps> = (props) => {
             onClick={onClick}
         >
             <img
-                src="assets/pngs/prevArrow.png"
+                src={"assets/prevArrow.png"}
                 alt="prev"
                 width="50"
             />
