@@ -11,6 +11,7 @@ export const Footer = () => {
 const Wrap = styled.footer`
     display: flex;
     justify-content: center;
+    background-color: white;
     
     img {
         width: 100%;
@@ -18,5 +19,5 @@ const Wrap = styled.footer`
 `;
 
 const FooterImage = styled.img`
-    max-width: 1920px;
+    max-width: 1600px;
 `;

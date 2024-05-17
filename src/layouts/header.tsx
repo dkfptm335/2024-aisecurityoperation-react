@@ -59,7 +59,7 @@ export const Header = () => {
                 </Link>
                 <a href={'https://www.naver.com/'} target={'_blank'} rel="noreferrer">
                     <Button>
-                        <img src={`assets/6-go-apply-button.png`}
+                        <img src={`assets/6-go-apply-button-small.png`}
                              alt="go google form page button"
                         />
                     </Button>
@@ -74,7 +74,6 @@ const Wrap = styled.header`
     justify-content: center; /* 가운데 정렬 */
     align-items: center;
     width: 100%; /* 전체 너비 설정 */
-    max-width: 1920px;
     position: relative;
     margin: 0 auto; /* 자동 마진을 이용한 가운데 정렬 */
 
@@ -86,13 +85,13 @@ const Wrap = styled.header`
 const Container = styled.nav`
     display: flex;
     align-items: center;
-    max-width: 1920px;
+    max-width: 1350px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%); /* X축으로 -50% 이동하여 완전한 중앙 정렬 */
-    top: 27%;
-
-    width: 95%;
+    top: 27.5%;
+    width: 100%;
+    //background-color: red;
 `;
 
 
@@ -105,10 +104,12 @@ const Button = styled.button`
 
     @media screen and (max-width: 480px) {
         width: 125%;
+        margin: 0 -10px;
     }
 
     @media screen and (min-width: 481px) and (max-width: 768px) {
         width: 120%;
+        margin: 0 -20px;
     }
 `;
 
@@ -121,14 +122,15 @@ const HomeButton = styled.button`
 
     @media screen and (max-width: 480px) {
         width: 170%;
+        margin: 0 -7px;
     }
 
     @media screen and (min-width: 481px) and (max-width: 768px) {
         width: 135%;
+        margin: 0 -10px;
     }
 `;
 
-
 const HeaderImage = styled.img`
-    max-width: 1920px;
+    width:100%;
 `;
