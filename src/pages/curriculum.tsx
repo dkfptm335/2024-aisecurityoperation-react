@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { PageTemplate } from "./main";
 import { useState } from "react";
+import React from "react";
 
 export const Curriculum: React.FC = () => {
     const [curriName, setCurriName] = useState<"normal" | "practical" | "special">("normal");
