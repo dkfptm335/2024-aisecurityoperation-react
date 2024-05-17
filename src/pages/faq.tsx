@@ -5,7 +5,7 @@ export const FAQ = () => {
     return (
         <Wrap>
             <MainImageWrap>
-                <MainImage src={'assets/5-lecturers-page.webp'} alt='lecturers page body'/>
+                <MainImage src={'assets/6-faq-page.webp'} alt='faq page body'/>
             </MainImageWrap>
         </Wrap>
     )

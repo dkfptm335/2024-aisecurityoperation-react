@@ -25,7 +25,7 @@ export const Apply: React.FC = () => {
                     onClick={() => setClassName("schedule")}
                 />
             </ClassWrap>
-            <ButtonWrap>
+            <ButtonWrap className={className}>
                 <img
                     src={'assets/4-apply-button.png'}
                     alt='go apply page button'
@@ -63,10 +63,9 @@ const ClassWrap = styled.nav<ClassWrapProps>`
     top: ${({className}) => {
         switch (className) {
             case 'qualification':
-                return '33%';
-            case 'schedule':
+                return '31%';
             default:
-                return '46.45%';
+                return '23.3%';
         }
     }};
     left: 50%;
@@ -98,10 +97,9 @@ const ButtonWrap = styled(PageTemplate)`
     bottom: ${({className}) => {
         switch (className) {
             case 'qualification':
-                return '20%';
-            case 'schedule':
+                return '12%';
             default:
-                return '4%';
+                return '11%';
         }
     }};
     left: 50%;
