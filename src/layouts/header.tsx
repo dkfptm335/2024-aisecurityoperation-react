@@ -12,10 +12,10 @@ export const Header = () => {
             />
             <Container>
                 <Link to='/'>
-                    <Button>
+                    <HomeButton>
                         <img src={'assets/0-home-button.png'}
                              alt="go home page button"/>
-                    </Button>
+                    </HomeButton>
                 </Link>
                 <Link to='/introduction'>
                     <Button>
@@ -57,14 +57,13 @@ export const Header = () => {
                              alt="go faq page button"/>
                     </Button>
                 </Link>
-                <Button>
-                    <img src={`assets/6-go-apply-button.png`}
-                         alt="go google form page button"
-                            onClick={() => (
-                                window.open('https://www.naver.com/', '_blank')
-                            )}
-                    />
-                </Button>
+                <a href={'https://www.naver.com/'} target={'_blank'} rel="noreferrer">
+                    <Button>
+                        <img src={`assets/6-go-apply-button.png`}
+                             alt="go google form page button"
+                        />
+                    </Button>
+                </a>
             </Container>
         </Wrap>
     );
@@ -103,6 +102,30 @@ const Button = styled.button`
     cursor: pointer;
     height: fit-content;
     margin: 0 0; /* 이미지 사이의 간격을 줄입니다. */
+
+    @media screen and (max-width: 480px) {
+        width: 125%;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        width: 120%;
+    }
+`;
+
+const HomeButton = styled.button`
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: fit-content;
+    margin: 0 0; /* 이미지 사이의 간격을 줄입니다. */
+
+    @media screen and (max-width: 480px) {
+        width: 170%;
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        width: 135%;
+    }
 `;
 
 

@@ -35,6 +35,8 @@ export const CarouselGallery = () => {
                 settings: {
                     slidesToShow: 3,
                     slidesToScroll: 3,
+                    prevArrow: undefined,
+                    nextArrow: undefined,
                 }
             },
             {
@@ -42,6 +44,8 @@ export const CarouselGallery = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
+                    prevArrow: undefined,
+                    nextArrow: undefined,
                 }
             },
             {
@@ -49,6 +53,8 @@ export const CarouselGallery = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    prevArrow: undefined,
+                    nextArrow: undefined,
                 }
             }
         ]
