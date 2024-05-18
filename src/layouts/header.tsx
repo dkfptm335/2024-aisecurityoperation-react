@@ -89,7 +89,7 @@ const Container = styled.nav`
     position: absolute;
     left: 50%;
     transform: translateX(-50%); /* X축으로 -50% 이동하여 완전한 중앙 정렬 */
-    top: 27.5%;
+    top: 30%;
     width: 100%;
     //background-color: red;
 `;
