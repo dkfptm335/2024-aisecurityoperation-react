@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
 import {CarouselGallery} from "../components/gridGallery";
+import {Alert} from "../layouts/Alert";
 
 export const Main = () => {
     const GalleryRef = useRef<HTMLElement>(null);
@@ -47,7 +48,8 @@ export const Main = () => {
                     <img
                         src={'assets/1-main-page-button.png'} alt='go explain video button'
                         onClick={() => (
-                            window.open('https://www.naver.com/', '_blank')
+                            // window.open('https://www.naver.com/', '_blank')
+                            Alert.fire('준비중', '준비중입니다.', 'info')
                         )}
                         style={{
                             zIndex: 1,

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {Link, useLocation} from "react-router-dom";
+import {Alert} from "./Alert";
 
 export const Header = () => {
     const {pathname} = useLocation();
@@ -57,13 +58,16 @@ export const Header = () => {
                              alt="go faq page button"/>
                     </Button>
                 </Link>
-                <a href={'https://www.naver.com/'} target={'_blank'} rel="noreferrer">
+                {/*<a href={'https://www.naver.com/'} target={'_blank'} rel="noreferrer">*/}
                     <Button>
                         <img src={`assets/6-go-apply-button-small.png`}
                              alt="go google form page button"
+                             onClick={() => (
+                                 Alert.fire('준비중', '준비중입니다.', 'info')
+                             )}
                         />
                     </Button>
-                </a>
+                {/*</a>*/}
             </Container>
         </Wrap>
     );
@@ -132,5 +136,5 @@ const HomeButton = styled.button`
 `;
 
 const HeaderImage = styled.img`
-    width:100%;
+    width: 100%;
 `;

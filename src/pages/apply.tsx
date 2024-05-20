@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {PageTemplate} from "./main";
 import React, {useState} from "react";
+import {Alert} from "../layouts/Alert";
 
 export const Apply: React.FC = () => {
     const [className, setClassName] = useState<"qualification" | "schedule">("qualification");
@@ -30,7 +31,8 @@ export const Apply: React.FC = () => {
                     src={'assets/4-apply-button.png'}
                     alt='go apply page button'
                     onClick={() => (
-                        window.open('https://www.naver.com/', '_blank')
+                        // window.open('https://www.naver.com/', '_blank')
+                        Alert.fire('준비중', '준비중입니다.', 'info')
                     )}
                     style={{
                         zIndex: 1,
