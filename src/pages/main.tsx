@@ -2,19 +2,20 @@ import React, {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
 import {CarouselGallery} from "../components/gridGallery";
 import {Alert} from "../layouts/Alert";
+import {Loading} from "../components/loading";
 
 export const Main = () => {
     const GalleryRef = useRef<HTMLElement>(null);
-    // 화살표 보이기/숨기기를 위한 상태
     const [showScrollButton, setShowScrollButton] = useState(true);
+    // 이미지 로딩 상태를 관리하기 위한 상태 변수 추가
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     const scrollToGallery = () => {
         if (GalleryRef.current) {
-            GalleryRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
+            GalleryRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     };
 
-    // 스크롤 위치에 따라 화살표 상태 업데이트
     useEffect(() => {
         const onScroll = () => {
             if (GalleryRef.current) {
@@ -25,17 +26,22 @@ export const Main = () => {
             }
         };
 
-        // 스크롤 이벤트 리스너 등록
         window.addEventListener('scroll', onScroll);
 
-        // 클린업 함수에서 이벤트 리스너 제거
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
     return (
         <Wrap>
             <MainImageWrap>
-                <MainImage src={'assets/1-main-page.webp'} alt='main page body'/>
+                {/* 이미지가 로드되었는지 확인하고, 로드되지 않았다면 Loading 컴포넌트를 보여줍니다. */}
+                {!isImageLoaded && <Loading />}
+                <MainImage
+                    src={'assets/1-main-page.webp'}
+                    alt='main page body'
+                    onLoad={() => setIsImageLoaded(true)} // 이미지가 로드되면 상태를 업데이트합니다.
+                    style={{display: isImageLoaded ? 'block' : 'none'}} // 이미지 로딩 중 숨김
+                />
                 {showScrollButton && (
                     <ScrollButton onClick={scrollToGallery}>
                         <img

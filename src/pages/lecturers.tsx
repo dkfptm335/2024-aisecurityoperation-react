@@ -1,11 +1,21 @@
 import styled from "styled-components";
 import {PageTemplate} from "./main";
+import {Loading} from "../components/loading";
+import React, {useState} from "react";
 
 export const Lecturers = () => {
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
+
     return (
         <Wrap>
             <MainImageWrap>
-                <MainImage src={'assets/5-lecturers-page.webp'} alt='lecturers page body'/>
+                {!isImageLoaded && <Loading />}
+                <MainImage
+                    src={'assets/5-lecturers-page.webp'}
+                    alt='lecturers page body'
+                    onLoad={() => setIsImageLoaded(true)}
+                    style={{display: isImageLoaded ? 'block' : 'none'}}
+                />
             </MainImageWrap>
         </Wrap>
     )

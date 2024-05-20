@@ -2,16 +2,21 @@ import styled from "styled-components";
 import { PageTemplate } from "./main";
 import { useState } from "react";
 import React from "react";
+import {Loading} from "../components/loading";
 
 export const Curriculum: React.FC = () => {
     const [curriName, setCurriName] = useState<"normal" | "practical" | "special">("normal");
+    const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     return (
         <Wrap>
             <MainImageWrap>
+                {!isImageLoaded && <Loading />}
                 <MainImage
                     src={`assets/3-curriculum-${curriName}.webp`}
                     alt='curriculum page body'
+                    onLoad={() => setIsImageLoaded(true)}
+                    style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
             </MainImageWrap>
             <ClassWrap curriName={curriName}>
