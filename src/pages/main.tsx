@@ -7,7 +7,6 @@ import {Loading} from "../components/loading";
 export const Main = () => {
     const GalleryRef = useRef<HTMLElement>(null);
     const [showScrollButton, setShowScrollButton] = useState(true);
-    // 이미지 로딩 상태를 관리하기 위한 상태 변수 추가
     const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     const scrollToGallery = () => {
@@ -34,19 +33,19 @@ export const Main = () => {
     return (
         <Wrap>
             <MainImageWrap>
-                {/* 이미지가 로드되었는지 확인하고, 로드되지 않았다면 Loading 컴포넌트를 보여줍니다. */}
                 {!isImageLoaded && <Loading />}
                 <MainImage
                     src={'assets/1-main-page.webp'}
                     alt='main page body'
-                    onLoad={() => setIsImageLoaded(true)} // 이미지가 로드되면 상태를 업데이트합니다.
-                    style={{display: isImageLoaded ? 'block' : 'none'}} // 이미지 로딩 중 숨김
+                    onLoad={() => setIsImageLoaded(true)}
+                    style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
                 {showScrollButton && (
                     <ScrollButton onClick={scrollToGallery}>
                         <img
                             src={'assets/scroll-button.png'}
                             alt={'ScrollButton'}
+                            style={{display: isImageLoaded ? 'block' : 'none'}}
                         />
                     </ScrollButton>
                 )}
@@ -59,6 +58,7 @@ export const Main = () => {
                         )}
                         style={{
                             zIndex: 1,
+                            display: isImageLoaded ? 'block' : 'none'
                         }}
                     />
                 </ButtonWrap>
@@ -83,7 +83,7 @@ export const PageTemplate = styled.section`
 const Wrap = styled(PageTemplate)`
     position: relative;
     width: 100%;
-    overflow-x: hidden; /* 수평 스크롤바를 숨깁니다 */
+    overflow-x: hidden;
 `;
 
 
@@ -100,8 +100,7 @@ const GalleryWrap = styled(PageTemplate)`
     max-width: 1600px;
     margin: 0 auto;
     border: 2px solid transparent;
-    //border-radius: 50px; /* 둥근 테두리를 원한다면 추가 */
-    box-sizing: border-box; /* 테두리 및 패딩을 총 크기에 포함 */
+    box-sizing: border-box;
     padding-bottom: 60px;
     padding-top: 60px;
 `;
@@ -116,7 +115,6 @@ const ScrollButton = styled.button`
     cursor: pointer;
     z-index: 2;
 
-    /* 모바일 화면에서 버튼 숨기기 */
     @media (max-width: 768px) {
         display: none;
     }
@@ -142,8 +140,8 @@ const ButtonWrap = styled(PageTemplate)`
     justify-content: center;
 
     & > img {
-        width: 30vw; /* 뷰포트 너비의 10%로 너비 설정 */
-        height: auto; /* 높이를 자동으로 조절하여 비율 유지 */
-        max-width: 100%; /* 이미지가 부모 요소보다 커지지 않도록 제한 */
+        width: 30vw;
+        height: auto;
+        max-width: 100%;
     }
 `;

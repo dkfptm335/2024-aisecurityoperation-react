@@ -27,7 +27,7 @@ function App() {
                 <Route path="/apply" element={<Apply/>}/>
                 {/*강사진 소개 페이지*/}
                 <Route path="/lecturers" element={<Lecturers/>}/>
-                {/*강사진 소개 페이지*/}
+                {/*FAQ 페이지*/}
                 <Route path="/faq" element={<FAQ/>}/>
                 {/*존재하지 않는 페이지로 접근할 경우 Main 컴포넌트로 리다이렉트*/}
                 <Route path="*" element={<Notfound/>}/>
@@ -47,7 +47,6 @@ const Wrapper = styled.main`
         width: 100%;
     }
     
-    // 1200픽셀 이상의 화면 너비에 대한 반응형 디자인
     @media only screen and (min-width: 1200px)
     {
         & > img {

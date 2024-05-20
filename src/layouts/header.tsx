@@ -75,11 +75,11 @@ export const Header = () => {
 
 const Wrap = styled.header`
     display: flex;
-    justify-content: center; /* 가운데 정렬 */
+    justify-content: center;
     align-items: center;
-    width: 100%; /* 전체 너비 설정 */
+    width: 100%;
     position: relative;
-    margin: 0 auto; /* 자동 마진을 이용한 가운데 정렬 */
+    margin: 0 auto;
 
     img {
         width: 100%;
@@ -92,10 +92,9 @@ const Container = styled.nav`
     max-width: 1350px;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* X축으로 -50% 이동하여 완전한 중앙 정렬 */
+    transform: translateX(-50%);
     top: 23%;
     width: 100%;
-    //background-color: red;
 `;
 
 
@@ -104,7 +103,7 @@ const Button = styled.button`
     border: none;
     cursor: pointer;
     height: fit-content;
-    margin: 0 0; /* 이미지 사이의 간격을 줄입니다. */
+    margin: 0 0;
 
     @media screen and (max-width: 480px) {
         width: 125%;
@@ -122,7 +121,7 @@ const HomeButton = styled.button`
     border: none;
     cursor: pointer;
     height: fit-content;
-    margin: 0 0; /* 이미지 사이의 간격을 줄입니다. */
+    margin: 0 0;
 
     @media screen and (max-width: 480px) {
         width: 170%;

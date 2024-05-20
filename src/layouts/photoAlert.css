@@ -1,7 +1,7 @@
 /* X버튼 사이즈 조절 */
 .custom-swal2-close {
-    width: 32px; /* 너비 조절 */
-    height: 32px; /* 높이 조절 */
-    font-size: 32px; /* 아이콘 크기 조절 */
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
     color: black;
 }

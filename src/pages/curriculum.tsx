@@ -24,16 +24,19 @@ export const Curriculum: React.FC = () => {
                     src={`assets/3-common-button${curriName === "normal" ? '-hover' : ''}.png`}
                     alt="common button"
                     onClick={() => setCurriName("normal")}
+                    style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
                 <img
                     src={`assets/3-practical-button${curriName === "practical" ? '-hover' : ''}.png`}
                     alt="practical button"
                     onClick={() => setCurriName("practical")}
+                    style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
                 <img
                     src={`assets/3-special-button${curriName === "special" ? '-hover' : ''}.png`}
                     alt="special button"
                     onClick={() => setCurriName("special")}
+                    style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
             </ClassWrap>
         </Wrap>
@@ -77,10 +80,6 @@ const ClassWrap = styled.nav<ClassWrapProps>`
     & > img {
         cursor: pointer;
         width: 27%;
-    }
-
-    @media screen and (max-width: 768px) {
-        /* 작은 화면에서 스타일링 추가 */
     }
 `;
 

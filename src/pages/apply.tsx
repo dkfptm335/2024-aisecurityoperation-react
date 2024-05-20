@@ -24,11 +24,13 @@ export const Apply: React.FC = () => {
                     src={`assets/4-qualification-button${className === "qualification" ? '-hover' : ''}.png`}
                     alt="qualification button"
                     onClick={() => setClassName("qualification")}
+                    style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
                 <img
                     src={`assets/4-schedule-button${className === "schedule" ? '-hover' : ''}.png`}
                     alt="schedule button"
                     onClick={() => setClassName("schedule")}
+                    style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
             </ClassWrap>
             <ButtonWrap className={className}>
@@ -41,6 +43,7 @@ export const Apply: React.FC = () => {
                     )}
                     style={{
                         zIndex: 1,
+                        display: isImageLoaded ? 'block' : 'none'
                     }}
                 />
             </ButtonWrap>

@@ -11,7 +11,7 @@ import useWindowSize from "../customhooks/useWindowSize";
 export const GridGallery = () => {
     return (
         <div className="gallery">
-            {sliderGalleryImages.slice(0, 12).map((img, index) => ( // 첫 12개 이미지만 표시합니다.
+            {sliderGalleryImages.slice(0, 12).map((img, index) => (
                 <div className="gallery-item" key={index}>
                     <img src={img.src} alt={`gallery-${index}`}/>
                 </div>
@@ -21,7 +21,7 @@ export const GridGallery = () => {
 };
 
 export const CarouselGallery = () => {
-    const { width } = useWindowSize(); // 현재 윈도우 크기 가져오기
+    const { width } = useWindowSize();
 
     const settings = {
         dots: true,
@@ -30,8 +30,8 @@ export const CarouselGallery = () => {
         slidesToShow: 4,
         slidesToScroll: 4,
         rows: 3,
-        prevArrow: width >= 1753 ? <PrevArrow /> : undefined, // 1024px 이상일 때만 화살표 표시
-        nextArrow: width >= 1753 ? <NextArrow /> : undefined, // 1024px 이상일 때만 화살표 표시
+        prevArrow: width >= 1753 ? <PrevArrow /> : undefined,
+        nextArrow: width >= 1753 ? <NextArrow /> : undefined,
         responsive: [
             {
                 breakpoint: 1280,
