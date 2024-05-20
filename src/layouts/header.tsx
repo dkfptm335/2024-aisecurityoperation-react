@@ -58,7 +58,7 @@ export const Header = () => {
                              alt="go faq page button"/>
                     </Button>
                 </Link>
-                <a href={'https://www.aisocedu.kr'}>
+                <a href={'https://aisocedu.kr'}>
                     <Button>
                         <img src={`assets/6-go-apply-button-small.png`}
                              alt="go google form page button"
