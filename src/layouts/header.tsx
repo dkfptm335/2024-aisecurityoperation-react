@@ -7,7 +7,7 @@ export const Header = () => {
     return (
         <Wrap>
             <HeaderImage
-                src={'assets/header-no-button.png'}
+                src={'assets/header-no-button-70.png'}
                 alt='header'
             />
             <Container>
@@ -89,7 +89,7 @@ const Container = styled.nav`
     position: absolute;
     left: 50%;
     transform: translateX(-50%); /* X축으로 -50% 이동하여 완전한 중앙 정렬 */
-    top: 30%;
+    top: 25%;
     width: 100%;
     //background-color: red;
 `;
