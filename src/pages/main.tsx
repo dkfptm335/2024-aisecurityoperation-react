@@ -73,8 +73,11 @@ export const PageTemplate = styled.section`
 `;
 
 const Wrap = styled(PageTemplate)`
-    position: relative; /* Wrap 컴포넌트를 상대 위치로 설정 */
+    position: relative;
+    width: 100%;
+    overflow-x: hidden; /* 수평 스크롤바를 숨깁니다 */
 `;
+
 
 const MainImageWrap = styled(PageTemplate)`
     display: flex;
@@ -91,8 +94,8 @@ const GalleryWrap = styled(PageTemplate)`
     border: 2px solid transparent;
     //border-radius: 50px; /* 둥근 테두리를 원한다면 추가 */
     box-sizing: border-box; /* 테두리 및 패딩을 총 크기에 포함 */
-    padding-bottom: 34px;
-    padding-top: 34px;
+    padding-bottom: 60px;
+    padding-top: 60px;
 `;
 
 const ScrollButton = styled.button`

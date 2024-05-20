@@ -27,11 +27,13 @@ body {
 }
 
 .slick-dots li button:before {
+    transform: scale(1.5);
     opacity: 1;
     color: gray !important;
 }
 
 .slick-dots li.slick-active button:before {
+    transform: scale(1.5);
     opacity: 1;
     color: white !important;
 }
