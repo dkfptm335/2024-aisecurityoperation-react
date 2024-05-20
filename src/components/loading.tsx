@@ -12,12 +12,12 @@ export const Loading = () => {
             flexDirection: 'column',
             fontFamily: 'Noto Sans KR',
         }}>
-            <h1 style={{
-                color: '#0165B0',
-                fontSize: '2rem',
-                fontWeight: 'bold',
-            }}>페이지 불러오는 중...
-            </h1>
+            {/*<h1 style={{*/}
+            {/*    color: '#0165B0',*/}
+            {/*    fontSize: '2rem',*/}
+            {/*    fontWeight: 'bold',*/}
+            {/*}}>페이지 불러오는 중...*/}
+            {/*</h1>*/}
             <GridLoader color={'#0165B0'} size={15} />
         </div>
     );
