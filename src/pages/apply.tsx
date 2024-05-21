@@ -38,8 +38,8 @@ export const Apply: React.FC = () => {
                     src={'assets/4-apply-button.png'}
                     alt='go apply page button'
                     onClick={() => (
-                        // window.open('https://www.naver.com/', '_blank')
-                        Alert.fire('준비중', '준비중입니다.', 'info')
+                        window.open('https://docs.google.com/forms/d/e/1FAIpQLSej30ZOF7RM9l1-hwNDZ-GNQzVQNcofj49MiWNyFGT8jXmP5Q/viewform', '_blank')
+                        // Alert.fire('준비중', '준비중입니다.', 'info')
                     )}
                     style={{
                         zIndex: 1,

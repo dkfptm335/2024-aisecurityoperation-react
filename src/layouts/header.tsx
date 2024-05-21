@@ -58,13 +58,17 @@ export const Header = () => {
                              alt="go faq page button"/>
                     </Button>
                 </Link>
-                <a href={'https://aisocedu.kr'}>
+                <a
+                    href={'https://docs.google.com/forms/d/e/1FAIpQLSej30ZOF7RM9l1-hwNDZ-GNQzVQNcofj49MiWNyFGT8jXmP5Q/viewform?usp=sf_link'}
+                    target='_blank'
+                    rel='noreferrer'
+                >
                     <Button>
                         <img src={`assets/6-go-apply-button-small.png`}
                              alt="go google form page button"
-                             onClick={() => (
-                                 Alert.fire('준비중', '준비중입니다.', 'info')
-                             )}
+                             // onClick={() => (
+                             //     Alert.fire('준비중', '준비중입니다.', 'info')
+                             // )}
                         />
                     </Button>
                 </a>
