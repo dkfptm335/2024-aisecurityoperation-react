@@ -100,8 +100,8 @@ const GalleryWrap = styled(PageTemplate)`
     margin: 0 auto;
     border: 2px solid transparent;
     box-sizing: border-box;
-    padding-bottom: 60px;
-    padding-top: 60px;
+    padding-bottom: 160px;
+    padding-top: 160px;
 `;
 
 const ScrollButton = styled.button`

@@ -3,7 +3,7 @@ import withReactContent from 'sweetalert2-react-content';
 import './photoAlert.css'
 
 const sweetAlert = Swal.mixin({
-    width: "85rem",
+    width: "100rem",
     customClass: {
         image: 'custom-swal2-image',
         closeButton: 'custom-swal2-close',

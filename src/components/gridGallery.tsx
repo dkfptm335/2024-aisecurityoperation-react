@@ -1,37 +1,36 @@
 import React from 'react';
 import Slider from "react-slick";
-import { PhotoAlert } from "../layouts/photoAlert";
+import {PhotoAlert} from "../layouts/photoAlert";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './style.css';
-import { sliderGalleryImages } from "./images";
-import { PrevArrow, NextArrow } from "./customArrows";
+import {sliderGalleryImages} from "./images";
+import {NextArrow, PrevArrow} from "./customArrows";
 import useWindowSize from "../customhooks/useWindowSize";
 
-export const GridGallery = () => {
-    return (
-        <div className="gallery">
-            {sliderGalleryImages.slice(0, 12).map((img, index) => (
-                <div className="gallery-item" key={index}>
-                    <img src={img.src} alt={`gallery-${index}`}/>
-                </div>
-            ))}
-        </div>
-    );
-};
+// export const GridGallery = () => {
+//     return (
+//         <div className="gallery">
+//             {sliderGalleryImages.slice(0, 12).map((img, index) => (
+//                 <div className="gallery-item" key={index}>
+//                     <img src={img.src} alt={`gallery-${index}`}/>
+//                 </div>
+//             ))}
+//         </div>
+//     );
+// };
 
 export const CarouselGallery = () => {
-    const { width } = useWindowSize();
+    const {width} = useWindowSize();
 
     const settings = {
         dots: true,
-        infinite: true,
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 4,
         rows: 3,
-        prevArrow: width >= 1753 ? <PrevArrow /> : undefined,
-        nextArrow: width >= 1753 ? <NextArrow /> : undefined,
+        prevArrow: width >= 1753 ? <PrevArrow/> : undefined,
+        nextArrow: width >= 1753 ? <NextArrow/> : undefined,
         responsive: [
             {
                 breakpoint: 1280,
@@ -69,7 +68,7 @@ export const CarouselGallery = () => {
                         showConfirmButton: false
                     });
                 }} className="gallery-carousel-item">
-                    <img src={image.src} alt={`gallery-${index}`} width={image.width} height={image.height} />
+                    <img src={image.src} alt={`gallery-${index}`} width={image.width} height={image.height}/>
                 </div>
             ))}
         </Slider>
