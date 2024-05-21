@@ -21,7 +21,7 @@ import useWindowSize from "../customhooks/useWindowSize";
 // };
 
 export const CarouselGallery = () => {
-    const { width } = useWindowSize();
+    const {width} = useWindowSize();
 
     const settings = {
         dots: true,
@@ -29,8 +29,8 @@ export const CarouselGallery = () => {
         slidesToShow: Math.min(4, sliderGalleryImages.length),
         slidesToScroll: Math.min(4, sliderGalleryImages.length),
         rows: 3,
-        prevArrow: width >= 1753 ? <PrevArrow /> : undefined,
-        nextArrow: width >= 1753 ? <NextArrow /> : undefined,
+        prevArrow: width >= 1753 ? <PrevArrow/> : undefined,
+        nextArrow: width >= 1753 ? <NextArrow/> : undefined,
         responsive: [
             {
                 breakpoint: 1280,
@@ -68,7 +68,7 @@ export const CarouselGallery = () => {
                         showConfirmButton: false
                     });
                 }} className="gallery-carousel-item">
-                    <img src={image.src} alt={`gallery-${index}`} width={image.width} height={image.height} />
+                    <img src={image.src} alt={`gallery-${index}`} width={image.width} height={image.height}/>
                 </div>
             ))}
         </Slider>

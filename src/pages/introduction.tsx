@@ -9,7 +9,7 @@ export const Introduction = () => {
     return (
         <Wrap>
             <MainImageWrap>
-                {!isImageLoaded && <Loading />}
+                {!isImageLoaded && <Loading/>}
                 <MainImage
                     src={'assets/2-introduction-page.webp'}
                     alt='introduction page body'

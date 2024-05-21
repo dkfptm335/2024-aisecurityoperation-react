@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {Link, useLocation} from "react-router-dom";
-import {Alert} from "./Alert";
 
 export const Header = () => {
     const {pathname} = useLocation();
@@ -66,9 +65,9 @@ export const Header = () => {
                     <Button>
                         <img src={`assets/6-go-apply-button-small.png`}
                              alt="go google form page button"
-                             // onClick={() => (
-                             //     Alert.fire('준비중', '준비중입니다.', 'info')
-                             // )}
+                            // onClick={() => (
+                            //     Alert.fire('준비중', '준비중입니다.', 'info')
+                            // )}
                         />
                     </Button>
                 </a>

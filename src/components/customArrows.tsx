@@ -1,12 +1,12 @@
 import React from 'react';
-import { CustomArrowProps } from 'react-slick';
+import {CustomArrowProps} from 'react-slick';
 
 const NextArrow: React.FC<CustomArrowProps> = (props) => {
-    const { className, style, onClick } = props;
+    const {className, style, onClick} = props;
     return (
         <div
             className={className}
-            style={{ ...style, display: 'block', background: 'none', zIndex: 1, right: '-40px', top: '47%'}}
+            style={{...style, display: 'block', background: 'none', zIndex: 1, right: '-40px', top: '47%'}}
             onClick={onClick}
         >
             <img
@@ -19,7 +19,7 @@ const NextArrow: React.FC<CustomArrowProps> = (props) => {
 };
 
 const PrevArrow: React.FC<CustomArrowProps> = (props) => {
-    const { className, style, onClick } = props;
+    const {className, style, onClick} = props;
     return (
         <div
             className={className}

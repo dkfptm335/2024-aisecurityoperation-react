@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {PageTemplate} from "./main";
 import React, {useState} from "react";
-import {Alert} from "../layouts/Alert";
 import {Loading} from "../components/loading";
 
 export const Apply: React.FC = () => {
@@ -11,7 +10,7 @@ export const Apply: React.FC = () => {
     return (
         <Wrap>
             <MainImageWrap>
-                {!isImageLoaded && <Loading />}
+                {!isImageLoaded && <Loading/>}
                 <MainImage
                     src={`assets/4-apply-${className}.webp`}
                     alt='apply page body'

@@ -18,7 +18,7 @@ export const Loading = () => {
             {/*    fontWeight: 'bold',*/}
             {/*}}>페이지 불러오는 중...*/}
             {/*</h1>*/}
-            <GridLoader color={'#0165B0'} size={15} />
+            <GridLoader color={'#0165B0'} size={15}/>
         </div>
     );
 }

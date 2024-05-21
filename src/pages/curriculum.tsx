@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { PageTemplate } from "./main";
-import { useState } from "react";
-import React from "react";
+import {PageTemplate} from "./main";
+import React, {useState} from "react";
 import {Loading} from "../components/loading";
 
 export const Curriculum: React.FC = () => {
@@ -11,7 +10,7 @@ export const Curriculum: React.FC = () => {
     return (
         <Wrap>
             <MainImageWrap>
-                {!isImageLoaded && <Loading />}
+                {!isImageLoaded && <Loading/>}
                 <MainImage
                     src={`assets/3-curriculum-${curriName}.webp`}
                     alt='curriculum page body'
@@ -62,7 +61,7 @@ const ClassWrap = styled.nav<ClassWrapProps>`
     width: 100%;
     max-width: 1600px;
     position: absolute;
-    top: ${({ curriName }) => {
+    top: ${({curriName}) => {
         switch (curriName) {
             case 'practical':
                 return '36%';
