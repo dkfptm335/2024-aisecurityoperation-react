@@ -69,4 +69,9 @@ export const sliderGalleryImages = [
         width: 400,
         height: 225,
     },
+    {
+        src: 'assets/gallery/9.jpg',
+        width: 400,
+        height: 225,
+    },
 ];
