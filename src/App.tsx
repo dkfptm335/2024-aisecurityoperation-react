@@ -12,6 +12,12 @@ import {FAQ} from "./pages/faq";
 import {Notfound} from "./pages/notfound";
 
 function App() {
+    React.useEffect(() => {
+        if (window.location.hostname === 'aisocedu.kr') {
+            window.location.replace(`https://www.aisocedu.kr${window.location.pathname}${window.location.search}`);
+        }
+    }, []);
+
     return (
         <Wrapper>
             <Header/>
@@ -46,9 +52,8 @@ const Wrapper = styled.main`
     & > img {
         width: 100%;
     }
-    
-    @media only screen and (min-width: 1200px)
-    {
+
+    @media only screen and (min-width: 1200px) {
         & > img {
             width: 100%;
         }
