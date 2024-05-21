@@ -1,16 +1,16 @@
 export const sliderGalleryImages = [
     {
-        src: 'assets/gallery/0.jpeg',
+        src: 'assets/gallery/0_1.jpg',
         width: 400,
         height: 225,
     },
     {
-        src: 'assets/gallery/1.jpg',
+        src: 'assets/gallery/0_2.jpg',
         width: 400,
         height: 225,
     },
     {
-        src: 'assets/gallery/2.jpeg',
+        src: 'assets/gallery/0_3.jpg',
         width: 400,
         height: 225,
     },
