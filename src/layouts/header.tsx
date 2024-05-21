@@ -59,7 +59,7 @@ export const Header = () => {
                     </Button>
                 </Link>
                 <a
-                    href={'https://docs.google.com/forms/d/e/1FAIpQLSej30ZOF7RM9l1-hwNDZ-GNQzVQNcofj49MiWNyFGT8jXmP5Q/viewform?usp=sf_link'}
+                    href={'https://forms.gle/DMKe49ZCDUMatVL38'}
                     target='_blank'
                     rel='noreferrer'
                 >
