@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {CarouselGallery} from "../components/gridGallery";
 import {Alert} from "../layouts/Alert";
 import {Loading} from "../components/loading";
+import {sliderGalleryImages} from "../components/images";
 
 export const Main = () => {
     const GalleryRef = useRef<HTMLElement>(null);
@@ -11,7 +12,7 @@ export const Main = () => {
 
     const scrollToGallery = () => {
         if (GalleryRef.current) {
-            GalleryRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            GalleryRef.current.scrollIntoView({behavior: 'smooth', block: 'start'});
         }
     };
 
@@ -33,7 +34,7 @@ export const Main = () => {
     return (
         <Wrap>
             <MainImageWrap>
-                {!isImageLoaded && <Loading />}
+                {!isImageLoaded && <Loading/>}
                 <MainImage
                     src={'assets/1-main-page.webp'}
                     alt='main page body'
@@ -64,9 +65,7 @@ export const Main = () => {
                 </ButtonWrap>
             </MainImageWrap>
             <GalleryWrap ref={GalleryRef}>
-                <StyledCarouselGallery/>
-                {/*<NewGridGallery/>*/}
-                {/*<GridGallery/>*/}
+                {sliderGalleryImages ? <StyledCarouselGallery/> : null}
             </GalleryWrap>
         </Wrap>
     );
