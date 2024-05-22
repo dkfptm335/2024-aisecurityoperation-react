@@ -83,12 +83,17 @@ const Wrap = styled(PageTemplate)`
     position: relative;
     width: 100%;
     overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 `;
 
 
 const MainImageWrap = styled(PageTemplate)`
     display: flex;
     justify-content: center;
+    max-width: 1920px;
 `;
 
 const MainImage = styled.img`

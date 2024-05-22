@@ -23,11 +23,15 @@ export const Introduction = () => {
 
 const Wrap = styled(PageTemplate)`
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 const MainImageWrap = styled(PageTemplate)`
     display: flex;
     justify-content: center;
+    max-width: 1920px;
 `;
 
 const MainImage = styled.img`
