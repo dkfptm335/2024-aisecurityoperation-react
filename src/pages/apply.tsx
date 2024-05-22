@@ -16,19 +16,19 @@ export const Apply: React.FC = () => {
             <ButtonWrap>
                 <img
                     src={`assets/4-qualification-button${className === "qualification" ? '-hover' : ''}.png`}
-                    alt="common button"
+                    alt="qualification button"
                     onClick={() => setClassName("qualification")}
                     style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
                 <img
                     src={`assets/4-schedule-button${className === "schedule" ? '-hover' : ''}.png`}
-                    alt="special button"
+                    alt="schedule button"
                     onClick={() => setClassName("schedule")}
                     style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
             </ButtonWrap>
             <BottomMainImageWrap>
-                <img src={`assets/4-apply-bottom-${className}.png`} alt="apply_body"
+                <img src={`assets/4-apply-bottom-${className}.webp`} alt="apply_body"
                      style={{display: isImageLoaded ? 'block' : 'none'}}/>
             </BottomMainImageWrap>
             <ApplyButtonWrap>

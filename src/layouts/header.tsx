@@ -41,12 +41,12 @@ export const Header = () => {
                              alt="go apply page button"/>
                     </Button>
                 </Link>
-                <Link to='/lecturers'>
+                <Link to='/environment'>
                     <Button>
-                        <img src={`assets/4-lecturers-button${
-                            pathname === '/lecturers' ? '-hover' : ''
+                        <img src={`assets/4-environment-button${
+                            pathname === '/environment' ? '-hover' : ''
                         }.png`}
-                             alt="go lecturers page button"/>
+                             alt="go environment page button"/>
                     </Button>
                 </Link>
                 <Link to='/faq'>
@@ -63,7 +63,7 @@ export const Header = () => {
                     rel='noreferrer'
                 >
                     <Button>
-                        <img src={`assets/6-go-apply-button-small.png`}
+                        <img src={`assets/6-go-apply-button.png`}
                              alt="go google form page button"
                             // onClick={() => (
                             //     Alert.fire('준비중', '준비중입니다.', 'info')

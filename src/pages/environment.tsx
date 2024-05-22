@@ -3,32 +3,32 @@ import {PageTemplate} from "./main";
 import React, {useState} from "react";
 import {Loading} from "../components/loading";
 
-export const Curriculum: React.FC = () => {
-    const [curriName, setCurriName] = useState<"normal" | "special">("normal");
+export const Environment: React.FC = () => {
+    const [className, setClassName] = useState<"lecturers" | "environment">("lecturers");
     const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     return (
         <Wrap>
             <TopMainImageWrap>
                 {!isImageLoaded && <Loading/>}
-                <img src={'assets/3-curriculum-top.webp'} alt="curriculum_main" onLoad={() => setIsImageLoaded(true)}/>
+                <img src={'assets/5-environment-top.png'} alt="environment_main" onLoad={() => setIsImageLoaded(true)}/>
             </TopMainImageWrap>
             <ButtonWrap>
                 <img
-                    src={`assets/3-normal-button${curriName === "normal" ? '-hover' : ''}.png`}
-                    alt="normal button"
-                    onClick={() => setCurriName("normal")}
+                    src={`assets/5-lecturers-button${className === "lecturers" ? '-hover' : ''}.png`}
+                    alt="common button"
+                    onClick={() => setClassName("lecturers")}
                     style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
                 <img
-                    src={`assets/3-special-button${curriName === "special" ? '-hover' : ''}.png`}
+                    src={`assets/5-environment-button${className === "environment" ? '-hover' : ''}.png`}
                     alt="special button"
-                    onClick={() => setCurriName("special")}
+                    onClick={() => setClassName("environment")}
                     style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
             </ButtonWrap>
             <BottomMainImageWrap>
-                <img src={`assets/3-curriculum-bottom-${curriName}.webp`} alt="curriculum_body"
+                <img src={`assets/5-environment-bottom-${className}.webp`} alt="environment_body"
                      style={{display: isImageLoaded ? 'block' : 'none'}}/>
             </BottomMainImageWrap>
         </Wrap>
@@ -62,7 +62,6 @@ const BottomMainImageWrap = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 5%;
 
     & > img {
         width: 100%;
@@ -79,6 +78,7 @@ const ButtonWrap = styled.nav`
 
     & > img {
         cursor: pointer;
-        width: 43%;
+        width: 37%;
+        margin: 0 1%;
     }
 `;

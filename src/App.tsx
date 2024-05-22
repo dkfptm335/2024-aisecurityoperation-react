@@ -7,7 +7,7 @@ import {Main} from "./pages/main";
 import {Introduction} from "./pages/introduction";
 import {Curriculum} from "./pages/curriculum";
 import {Apply} from "./pages/apply";
-import {Lecturers} from "./pages/lecturers";
+import {Environment} from "./pages/environment";
 import {FAQ} from "./pages/faq";
 import {Notfound} from "./pages/notfound";
 
@@ -32,7 +32,7 @@ function App() {
                 {/*교육신청 페이지*/}
                 <Route path="/apply" element={<Apply/>}/>
                 {/*강사진 소개 페이지*/}
-                <Route path="/lecturers" element={<Lecturers/>}/>
+                <Route path="/environment" element={<Environment/>}/>
                 {/*FAQ 페이지*/}
                 <Route path="/faq" element={<FAQ/>}/>
                 {/*존재하지 않는 페이지로 접근할 경우 Main 컴포넌트로 리다이렉트*/}
