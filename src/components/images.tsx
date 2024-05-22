@@ -35,4 +35,34 @@ export const sliderGalleryImages = [
         height: 225,
         description: 'AI 보안관제 전문인력 양성교육 포스터_3',
     },
+    {
+        src: 'assets/gallery/0.png',
+        width: 400,
+        height: 225,
+    },
+    {
+        src: 'assets/gallery/1.png',
+        width: 400,
+        height: 225,
+    },
+    {
+        src: 'assets/gallery/2.png',
+        width: 400,
+        height: 225,
+    },
+    {
+        src: 'assets/gallery/3.png',
+        width: 400,
+        height: 225,
+    },
+    {
+        src: 'assets/gallery/4.png',
+        width: 400,
+        height: 225,
+    },
+    {
+        src: 'assets/gallery/5.png',
+        width: 400,
+        height: 225,
+    },
 ];
