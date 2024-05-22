@@ -64,9 +64,10 @@ export const Main = () => {
                     />
                 </ButtonWrap>
             </MainImageWrap>
-            <GalleryWrap ref={GalleryRef}>
+            {isImageLoaded ? <GalleryWrap ref={GalleryRef}>
                 {sliderGalleryImages ? <StyledCarouselGallery/> : null}
-            </GalleryWrap>
+            </GalleryWrap> : null}
+
         </Wrap>
     );
 }
