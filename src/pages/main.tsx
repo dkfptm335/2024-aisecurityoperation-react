@@ -82,7 +82,7 @@ export const PageTemplate = styled.section`
 const Wrap = styled(PageTemplate)`
     position: relative;
     width: 100%;
-    //overflow-x: hidden;
+    overflow-x: hidden;
     justify-content: center;
     align-items: center;
     display: flex;
