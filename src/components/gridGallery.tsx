@@ -8,26 +8,15 @@ import {sliderGalleryImages} from "./images";
 import {NextArrow, PrevArrow} from "./customArrows";
 import useWindowSize from "../customhooks/useWindowSize";
 
-// export const GridGallery = () => {
-//     return (
-//         <div className="gallery">
-//             {sliderGalleryImages.slice(0, 12).map((img, index) => (
-//                 <div className="gallery-item" key={index}>
-//                     <img src={img.src} alt={`gallery-${index}`}/>
-//                 </div>
-//             ))}
-//         </div>
-//     );
-// };
-
 export const CarouselGallery = () => {
     const {width} = useWindowSize();
 
     const settings = {
         dots: true,
+        infinite: true,
         speed: 500,
-        slidesToShow: Math.min(4, sliderGalleryImages.length),
-        slidesToScroll: Math.min(4, sliderGalleryImages.length),
+        slidesToShow: 4,
+        slidesToScroll: 4,
         rows: 3,
         prevArrow: width >= 1753 ? <PrevArrow/> : undefined,
         nextArrow: width >= 1753 ? <NextArrow/> : undefined,
@@ -35,15 +24,15 @@ export const CarouselGallery = () => {
             {
                 breakpoint: 1280,
                 settings: {
-                    slidesToShow: Math.min(3, sliderGalleryImages.length),
-                    slidesToScroll: Math.min(3, sliderGalleryImages.length),
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: Math.min(2, sliderGalleryImages.length),
-                    slidesToScroll: Math.min(2, sliderGalleryImages.length),
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                 }
             },
             {

@@ -82,7 +82,7 @@ export const PageTemplate = styled.section`
 const Wrap = styled(PageTemplate)`
     position: relative;
     width: 100%;
-    overflow-x: hidden;
+    //overflow-x: hidden;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -107,6 +107,7 @@ const GalleryWrap = styled(PageTemplate)`
     box-sizing: border-box;
     padding-bottom: 160px;
     padding-top: 160px;
+    width: 100%;
 `;
 
 const ScrollButton = styled.button`
@@ -126,6 +127,7 @@ const ScrollButton = styled.button`
 
 const StyledCarouselGallery = styled(CarouselGallery)`
     max-width: 1600px;
+    width: 100%;
 
     @media screen and (max-width: 1199px) {
         width: 100%;
