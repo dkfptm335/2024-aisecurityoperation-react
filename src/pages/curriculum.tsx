@@ -4,90 +4,80 @@ import React, {useState} from "react";
 import {Loading} from "../components/loading";
 
 export const Curriculum: React.FC = () => {
-    const [curriName, setCurriName] = useState<"normal" | "practical" | "special">("normal");
+    const [curriName, setCurriName] = useState<"normal" | "special">("normal");
     const [isImageLoaded, setIsImageLoaded] = useState(false);
 
     return (
         <Wrap>
-            <MainImageWrap>
+            <TopMainImageWrap>
                 {!isImageLoaded && <Loading/>}
-                <MainImage
-                    src={`assets/3-curriculum-${curriName}.webp`}
-                    alt='curriculum page body'
-                    onLoad={() => setIsImageLoaded(true)}
-                    style={{display: isImageLoaded ? 'block' : 'none'}}
-                />
-            </MainImageWrap>
-            <ClassWrap curriName={curriName}>
-                <img
-                    src={`assets/3-common-button${curriName === "normal" ? '-hover' : ''}.png`}
-                    alt="common button"
-                    onClick={() => setCurriName("normal")}
-                    style={{display: isImageLoaded ? 'block' : 'none'}}
-                />
-                <img
-                    src={`assets/3-practical-button${curriName === "practical" ? '-hover' : ''}.png`}
-                    alt="practical button"
-                    onClick={() => setCurriName("practical")}
-                    style={{display: isImageLoaded ? 'block' : 'none'}}
-                />
-                <img
-                    src={`assets/3-special-button${curriName === "special" ? '-hover' : ''}.png`}
-                    alt="special button"
-                    onClick={() => setCurriName("special")}
-                    style={{display: isImageLoaded ? 'block' : 'none'}}
-                />
-            </ClassWrap>
+                <img src={'assets/3-curriculum-top.webp'} alt="curriculum_main" onLoad={() => setIsImageLoaded(true)}/>
+                <ButtonWrap>
+                    <img
+                        src={`assets/3-curriculum-button-normal${curriName === "normal" ? '-hover' : ''}.png`}
+                        alt="common button"
+                        onClick={() => setCurriName("normal")}
+                        style={{display: isImageLoaded ? 'block' : 'none'}}
+                    />
+                    <img
+                        src={`assets/3-curriculum-button-special${curriName === "special" ? '-hover' : ''}.png`}
+                        alt="special button"
+                        onClick={() => setCurriName("special")}
+                        style={{display: isImageLoaded ? 'block' : 'none'}}
+                    />
+                </ButtonWrap>
+            </TopMainImageWrap>
+            <BottomMainImageWrap>
+                <img src={`assets/3-curriculum-bottom-${curriName}.webp`} alt="curriculum_body" style={{display: isImageLoaded ? 'block' : 'none'}}/>
+            </BottomMainImageWrap>
         </Wrap>
     );
 };
 
-interface ClassWrapProps {
-    curriName: "normal" | "practical" | "special";
-}
-
 const Wrap = styled(PageTemplate)`
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    position: relative;
 `;
 
-const ClassWrap = styled.nav<ClassWrapProps>`
+const TopMainImageWrap = styled.div`
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & > img {
+        width: 100%;
+    }
+`;
+
+const ButtonWrap = styled.nav`
     display: flex;
     justify-content: center;
     width: 100%;
     max-width: 1600px;
-    position: absolute;
-    top: ${({curriName}) => {
-        switch (curriName) {
-            case 'practical':
-                return '36%';
-            case 'special':
-                return '62.8%';
-            case 'normal':
-            default:
-                return '46.45%';
-        }
-    }};
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
 
     & > img {
         cursor: pointer;
-        width: 27%;
+        width: 43%;
     }
 `;
-
-const MainImageWrap = styled(PageTemplate)`
+const BottomMainImageWrap = styled.div`
+    max-width: 1600px;
     display: flex;
     justify-content: center;
-    z-index: 0;
-`;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
 
-const MainImage = styled.img`
-    max-width: 1600px;
+    & > img {
+        width: 100%;
+    }
 `;

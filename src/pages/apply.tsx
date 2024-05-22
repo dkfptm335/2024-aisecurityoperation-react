@@ -85,10 +85,6 @@ const ClassWrap = styled.nav<ClassWrapProps>`
         cursor: pointer;
         width: 43%;
     }
-
-    @media screen and (max-width: 768px) {
-        /* 작은 화면에서 스타일링 추가 */
-    }
 `;
 
 const MainImageWrap = styled(PageTemplate)`
@@ -115,13 +111,13 @@ const ButtonWrap = styled(PageTemplate)`
     transform: translate(-50%, -50%);
     width: 100%;
     max-width: 1400px;
-    cursor: pointer;
     display: flex;
     justify-content: center;
 
     & > img {
         width: 87vw;
-        height: auto; /* 높이를 자동으로 조절하여 비율 유지 */
-        max-width: 100%; /* 이미지가 부모 요소보다 커지지 않도록 제한 */
+        height: auto;
+        max-width: 100%;
+        cursor: pointer;
     }
 `;

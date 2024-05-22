@@ -1,7 +1,11 @@
-/* X버튼 사이즈 조절 */
-.custom-swal2-close {
-    width: 32px;
-    height: 32px;
-    font-size: 32px;
-    color: black;
+.swal2-popup {
+    .custom-swal2-image {
+    }
+
+    .custom-swal2-close {
+        width: 32px;
+        height: 32px;
+        font-size: 32px;
+        color: black;
+    }
 }

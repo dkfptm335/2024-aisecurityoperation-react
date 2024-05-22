@@ -65,7 +65,8 @@ export const CarouselGallery = () => {
                         imageWidth: '100%',
                         imageHeight: 'auto',
                         showCloseButton: true,
-                        showConfirmButton: false
+                        showConfirmButton: false,
+                        text: image.description,
                     });
                 }} className="gallery-carousel-item">
                     <img src={image.src} alt={`gallery-${index}`} width={image.width} height={image.height}/>
