@@ -12,23 +12,24 @@ export const Curriculum: React.FC = () => {
             <TopMainImageWrap>
                 {!isImageLoaded && <Loading/>}
                 <img src={'assets/3-curriculum-top.webp'} alt="curriculum_main" onLoad={() => setIsImageLoaded(true)}/>
-                <ButtonWrap>
-                    <img
-                        src={`assets/3-curriculum-button-normal${curriName === "normal" ? '-hover' : ''}.png`}
-                        alt="common button"
-                        onClick={() => setCurriName("normal")}
-                        style={{display: isImageLoaded ? 'block' : 'none'}}
-                    />
-                    <img
-                        src={`assets/3-curriculum-button-special${curriName === "special" ? '-hover' : ''}.png`}
-                        alt="special button"
-                        onClick={() => setCurriName("special")}
-                        style={{display: isImageLoaded ? 'block' : 'none'}}
-                    />
-                </ButtonWrap>
             </TopMainImageWrap>
+            <ButtonWrap>
+                <img
+                    src={`assets/3-normal-button${curriName === "normal" ? '-hover' : ''}.png`}
+                    alt="common button"
+                    onClick={() => setCurriName("normal")}
+                    style={{display: isImageLoaded ? 'block' : 'none'}}
+                />
+                <img
+                    src={`assets/3-special-button${curriName === "special" ? '-hover' : ''}.png`}
+                    alt="special button"
+                    onClick={() => setCurriName("special")}
+                    style={{display: isImageLoaded ? 'block' : 'none'}}
+                />
+            </ButtonWrap>
             <BottomMainImageWrap>
-                <img src={`assets/3-curriculum-bottom-${curriName}.webp`} alt="curriculum_body" style={{display: isImageLoaded ? 'block' : 'none'}}/>
+                <img src={`assets/3-curriculum-bottom-${curriName}.webp`} alt="curriculum_body"
+                     style={{display: isImageLoaded ? 'block' : 'none'}}/>
             </BottomMainImageWrap>
         </Wrap>
     );
@@ -55,20 +56,6 @@ const TopMainImageWrap = styled.div`
     }
 `;
 
-const ButtonWrap = styled.nav`
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 1600px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-
-    & > img {
-        cursor: pointer;
-        width: 43%;
-    }
-`;
 const BottomMainImageWrap = styled.div`
     max-width: 1600px;
     display: flex;
@@ -79,5 +66,19 @@ const BottomMainImageWrap = styled.div`
 
     & > img {
         width: 100%;
+    }
+`;
+
+const ButtonWrap = styled.nav`
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1600px;
+    position: relative;
+    margin: 0 auto;
+
+    & > img {
+        cursor: pointer;
+        width: 43%;
     }
 `;

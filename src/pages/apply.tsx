@@ -9,30 +9,29 @@ export const Apply: React.FC = () => {
 
     return (
         <Wrap>
-            <MainImageWrap>
+            <TopMainImageWrap>
                 {!isImageLoaded && <Loading/>}
-                <MainImage
-                    src={`assets/4-apply-${className}.webp`}
-                    alt='apply page body'
-                    onLoad={() => setIsImageLoaded(true)}
-                    style={{display: isImageLoaded ? 'block' : 'none'}}
-                />
-            </MainImageWrap>
-            <ClassWrap className={className}>
+                <img src={'assets/4-apply-top.png'} alt="apply_main" onLoad={() => setIsImageLoaded(true)}/>
+            </TopMainImageWrap>
+            <ButtonWrap>
                 <img
                     src={`assets/4-qualification-button${className === "qualification" ? '-hover' : ''}.png`}
-                    alt="qualification button"
+                    alt="common button"
                     onClick={() => setClassName("qualification")}
                     style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
                 <img
                     src={`assets/4-schedule-button${className === "schedule" ? '-hover' : ''}.png`}
-                    alt="schedule button"
+                    alt="special button"
                     onClick={() => setClassName("schedule")}
                     style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
-            </ClassWrap>
-            <ButtonWrap className={className}>
+            </ButtonWrap>
+            <BottomMainImageWrap>
+                <img src={`assets/4-apply-bottom-${className}.png`} alt="apply_body"
+                     style={{display: isImageLoaded ? 'block' : 'none'}}/>
+            </BottomMainImageWrap>
+            <ApplyButtonWrap>
                 <img
                     src={'assets/4-apply-button.png'}
                     alt='go apply page button'
@@ -40,46 +39,69 @@ export const Apply: React.FC = () => {
                         window.open('https://forms.gle/DMKe49ZCDUMatVL38', '_blank')
                         // Alert.fire('준비중', '준비중입니다.', 'info')
                     )}
-                    style={{
-                        zIndex: 1,
-                        display: isImageLoaded ? 'block' : 'none'
-                    }}
+                    style={{display: isImageLoaded ? 'block' : 'none'}}
                 />
-            </ButtonWrap>
+            </ApplyButtonWrap>
+            <FooterMainImageWrap>
+                <img src={`assets/4-apply-footer.png`} alt="apply_footer"
+                     style={{display: isImageLoaded ? 'block' : 'none'}}/>
+            </FooterMainImageWrap>
         </Wrap>
     );
 };
 
-interface ClassWrapProps {
-    className: "qualification" | "schedule";
-}
-
 const Wrap = styled(PageTemplate)`
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    position: relative;
 `;
 
-const ClassWrap = styled.nav<ClassWrapProps>`
+const TopMainImageWrap = styled.div`
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & > img {
+        width: 100%;
+    }
+`;
+
+const BottomMainImageWrap = styled.div`
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & > img {
+        width: 100%;
+    }
+`;
+
+const FooterMainImageWrap = styled.div`
+    max-width: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & > img {
+        width: 100%;
+    }
+`;
+
+const ButtonWrap = styled.nav`
     display: flex;
     justify-content: center;
     width: 100%;
     max-width: 1600px;
-    position: absolute;
-    top: ${({className}) => {
-        switch (className) {
-            case 'qualification':
-                return '31%';
-            default:
-                return '23.3%';
-        }
-    }};
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+    position: relative;
+    margin: 0 auto;
 
     & > img {
         cursor: pointer;
@@ -87,37 +109,17 @@ const ClassWrap = styled.nav<ClassWrapProps>`
     }
 `;
 
-const MainImageWrap = styled(PageTemplate)`
-    display: flex;
-    justify-content: center;
-    z-index: 0;
-`;
-
-const MainImage = styled.img`
-    max-width: 1600px;
-`;
-
-const ButtonWrap = styled(PageTemplate)`
-    position: absolute;
-    bottom: ${({className}) => {
-        switch (className) {
-            case 'qualification':
-                return '12%';
-            default:
-                return '11%';
-        }
-    }};
-    left: 50%;
-    transform: translate(-50%, -50%);
+const ApplyButtonWrap = styled.div`
+    position: relative;
+    margin: 0 auto;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1600px;
     display: flex;
     justify-content: center;
 
     & > img {
-        width: 87vw;
+        width: 85%;
         height: auto;
-        max-width: 100%;
         cursor: pointer;
     }
 `;
