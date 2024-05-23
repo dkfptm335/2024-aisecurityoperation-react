@@ -18,22 +18,22 @@ export const sliderGalleryImages = [
         description: '교육장 외부 전경',
     },
     {
-        src: 'assets/gallery/AI 보안관제 전문인력 양성교육 포스터_1.webp',
+        src: 'assets/gallery/24년도 AI 보안관제 전문인력 양성_개최안내_카드뉴스_1.webp',
         width: 400,
         height: 225,
-        description: 'AI 보안관제 전문인력 양성교육 포스터_1',
+        description: '24년도 AI 보안관제 전문인력 양성_개최안내_카드뉴스_1',
     },
     {
-        src: 'assets/gallery/AI 보안관제 전문인력 양성교육 포스터_2.webp',
+        src: 'assets/gallery/24년도 AI 보안관제 전문인력 양성_개최안내_카드뉴스_2.webp',
         width: 400,
         height: 225,
-        description: 'AI 보안관제 전문인력 양성교육 포스터_2',
+        description: '24년도 AI 보안관제 전문인력 양성_개최안내_카드뉴스_2',
     },
     {
-        src: 'assets/gallery/AI 보안관제 전문인력 양성교육 포스터_3.webp',
+        src: 'assets/gallery/24년도 AI 보안관제 전문인력 양성_개최안내_카드뉴스_3.webp',
         width: 400,
         height: 225,
-        description: 'AI 보안관제 전문인력 양성교육 포스터_3',
+        description: '24년도 AI 보안관제 전문인력 양성_개최안내_카드뉴스_3',
     },
     {
         src: 'assets/gallery/0.webp',
